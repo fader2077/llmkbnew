@@ -1,0 +1,162 @@
+﻿timestamp,experiment_id,chunk_size,overlap,question_id,question,reference_answer,predicted_answer,f1_score,cosine_similarity,num_chunks,latency_ms
+2026-01-10T02:15:53.573574,Chunk-1024_Overlap-256,1024,256,0,What emergency measures can farmers take to improve survival when a newborn lamb cannot stand or suckle on its own?,"When a newborn lamb is too weak to stand or suckle, immediate human assistance is required. Farmers should help the lamb stand and guide its mouth to the ewe’s teat to stimulate the suckling reflex. If suckling remains difficult, colostrum can be fed using a bottle, along with vitamin solutions, sugar water, or energy supplements to increase energy levels. Thiamine injection may also enhance vitality. If the lamb still cannot feed, a veterinarian should be consulted to perform stomach tube feeding with colostrum to ensure adequate early nutrition.","When faced with a newborn lamb that is unable to stand or suckle on its own, farmers should take the following emergency measures:
+
+1. **Isolation**: Immediately isolate the lamb from the flock to prevent the spread of pathogens and reduce stress.
+
+2. **Environment**: Provide a clean, quiet, dry, bright, and well-ventilated area with soft bedding to enhance comfort and safety.
+
+3. **Assistance**: Assist the lamb in standing to encourage eating and drinking, which are crucial for recovery.
+
+4. **Nutrition**: Ensure access to clean water and feed. If unable to suckle, consider providing colostrum or a nutrient-rich solution to support its health.
+
+5. **Veterinary Care**: Contact a veterinarian promptly for diagnosis and treatment, especially if signs of infection like E. coli or pneumonia are present.
+
+These steps aim to stabilize the lamb's condition and improve its chances of recovery.",0.2366863905325444,0.8785452978031814,10,10519.273400073871
+2026-01-10T02:16:02.495512,Chunk-1024_Overlap-256,1024,256,1,"What are the three major causes of mortality in newborn lambs, and how should hypothermia be managed in emergency situations?","The three major life-threatening problems for newborn lambs are inability to feed independently, insufficient milk supply from the ewe, and hypothermia. Hypothermia commonly occurs in cold or damp environments, especially in premature or weak lambs. Emergency treatment includes drying the lamb immediately and placing it close to the human body to reduce heat loss. In severe cases, the lamb can be immersed in warm water with the head kept above the surface to rapidly raise body temperature, followed by thorough drying and continued warming. Heat lamps are commonly used to maintain body temperature in less severe cases.","**Three Major Causes of Mortality in Newborn Lambs:**
+
+1. **Hypothermia:** Inadequate intake of colostrum can lead to hypothermia, which is a significant cause of mortality in newborn lambs. Ensuring they receive sufficient colostrum is crucial for their survival.
+
+2. **Coccidiosis/Diarrhea:** This parasitic disease causes severe diarrhea and dehydration, often leading to death if not treated promptly. Proper treatment and management are essential to prevent fatalities.
+
+3. **Maternal Infections (e.g., Q Fever or Mastitis):** These infections can result in stillbirths or weak lambs by affecting the placenta and amniotic fluid, underscoring the importance of maternal health during pregnancy.
+
+**Management of Hypothermia in Emergency Situations:**
+
+- **Provide Warm Water:** Ensure access to warm water for drinking to prevent dehydration and help maintain body temperature.
+- **Administer Colostrum via Gavage Tube:** If lambs are too weak to drink, manually feed colostrum using a gavage tube to ensure they receive the necessary nutrients and antibodies.
+- **Maintain Clean Conditions:** Use clean troughs and feeding equipment to prevent further contamination and infection.
+
+By addressing these causes and implementing effective management strategies, particularly for hypothermia, the survival rates of newborn lambs can be significantly improved.",0.2388059701492537,0.84026224845892,10,8873.047499917448
+2026-01-10T02:16:10.239065,Chunk-1024_Overlap-256,1024,256,2,"Why are young goats more susceptible to clinical disease caused by Moniezia spp. infection than adult goats, and what are the common clinical signs?","Adult goats infected with Moniezia spp. usually show mild or no clinical signs, whereas young goats are more susceptible due to immature intestinal development and higher nutritional requirements. The movement of the tapeworm within the small intestine irritates the intestinal mucosa, and parasite metabolic by-products further impair digestion and nutrient absorption. Common clinical signs include reduced appetite, digestive disorders, anemia, growth retardation, weight loss, abdominal distension, and edema. Severe infections may result in death. Goats younger than eight months are therefore considered a high-risk group.","**Answer:**
+
+Young goats are more susceptible to Moniezia spp. infection due to their underdeveloped immune systems and immature digestive systems. Their lack of prior exposure to parasites leaves them without built-up immunity, making them more vulnerable. Additionally, stress from factors such as weaning or overcrowding can further weaken their resistance.
+
+**Common Clinical Signs:**
+1. **Diarrhea:** Resulting from disrupted digestion caused by the tapeworms.
+2. **Weight Loss and Stunted Growth:** Due to nutritional deficiencies and poor absorption.
+3. **Weakness:** Contributed by anemia if the infection is severe, leading to reduced energy levels.
+
+These signs highlight the impact of Moniezia infection on young goats' health, emphasizing the need for early detection and appropriate management strategies.",0.2666666666666667,0.905498602015889,10,7714.556799968705
+2026-01-10T02:16:22.305997,Chunk-1024_Overlap-256,1024,256,3,"What is the life cycle of tapeworm infection in goats, and what farm management practices can reduce the risk of infection?","Common tapeworms infecting goats, such as Moniezia expansa and Moniezia benedeni, use oribatid mites as intermediate hosts. Goats become infected when they ingest mites containing infective larvae during grazing. Oribatid mites are commonly found in moist pasture and surface soil, making environmental conditions a major risk factor. Farm management strategies include avoiding grazing after rainfall or during early mornings when dew is present, implementing routine deworming programs (approximately 2–4 times per year), and promptly treating heavily infected goats followed by a second treatment two weeks later to reduce egg shedding and reinfection.","The provided context does not include specific information about tapeworm infections in goats. However, based on general knowledge, here is an overview of the life cycle and management practices:
+
+**Life Cycle of Tapeworms in Goats:**
+1. **Adult Stage:** The adult tapeworm resides in the goat's small intestine.
+2. **Egg Shedding:** Eggs are shed in the feces and can be ingested by intermediate hosts, such as pasture mites or beetles.
+3. **Larval Development:** Larvae develop within these insects.
+4. **Infection of Goat:** When the goat grazes and ingests an infected insect, the larvae enter the goat's intestine and attach to the intestinal wall, eventually developing into adult tapeworms.
+
+**Farm Management Practices to Reduce Risk:**
+1. **Deworming:** Regular use of appropriate anthelmintics.
+2. **Rotational Grazing:** Moving animals to new pastures to disrupt the life cycle.
+3. **Sanitation:** Cleaning and composting manure regularly.
+4. **Access to Clean Resources:** Ensuring clean water and uncontaminated feed.
+
+Please note that this information is based on general knowledge, as the provided context does not specifically address tapeworm infections in goats.",0.20100502512562815,0.8367840263451802,10,12017.212900100276
+2026-01-10T02:16:29.622201,Chunk-1024_Overlap-256,1024,256,4,"Why does abortion caused by Chlamydophila abortus in goats usually occur during mid to late pregnancy, and what is the main pathological mechanism?","After initial infection, goats infected with Chlamydophila abortus usually show only mild and transient clinical signs, followed by a latent infection stage in which the pathogen persists in the uterine mucosa. During mid to late pregnancy (around day 115 of gestation), the bacteria become reactivated and replicate rapidly, causing severe necrotizing placentitis. This results in necrosis of placental cotyledons, impaired nutrient and oxygen transfer to the fetus, and ultimately fetal death, abortion, or stillbirth. Some does may show blood-tinged vaginal discharge 2–3 days before abortion, and retained placenta may also occur.","Abortion caused by Chlamydophila abortus in goats typically occurs during mid to late pregnancy due to the bacteria's interaction with the placental and fetal membrane tissues. The infection likely persists without immediate effects until later stages when bacterial growth triggers inflammation and uterine contractions, leading to abortion. Additionally, immune system changes or stressors during pregnancy may facilitate this process.
+
+**Answer:**
+
+Abortion caused by Chlamydophila abortus in goats occurs during mid to late pregnancy because the bacteria likely persist without causing immediate issues until they trigger inflammation and uterine contractions later on. This interaction primarily affects the placenta and fetal membranes, leading to abortion.",0.3356643356643357,0.9248104646251805,10,7271.150700049475
+2026-01-10T04:15:42.165990,Chunk-2048_Overlap-512,2048,512,0,What emergency measures can farmers take to improve survival when a newborn lamb cannot stand or suckle on its own?,"When a newborn lamb is too weak to stand or suckle, immediate human assistance is required. Farmers should help the lamb stand and guide its mouth to the ewe’s teat to stimulate the suckling reflex. If suckling remains difficult, colostrum can be fed using a bottle, along with vitamin solutions, sugar water, or energy supplements to increase energy levels. Thiamine injection may also enhance vitality. If the lamb still cannot feed, a veterinarian should be consulted to perform stomach tube feeding with colostrum to ensure adequate early nutrition.","When faced with a newborn lamb that is unable to stand or suckle on its own, farmers should take the following emergency measures:
+
+1. **Assess the Ewe's Udder**: Check if the ewe has a hardened udder, which may prevent proper nursing. Treat any mastitis symptoms (fever, lumps) with antibiotics and warm compresses.
+
+2. **Provide Nutrition**: Offer small, frequent feedings of colostrum or a milk substitute proportional to the lamb's body weight to ensure adequate nutrition without causing bloating.
+
+3. **Manual Assistance**: Gently help the lamb stand and place it near the ewe to encourage suckling once upright.
+
+4. **Monitor Health**: Watch for signs of stress or illness in the lamb, which could weaken its immune system and hinder recovery.
+
+By addressing these factors, farmers can support the lamb's health and encourage normal development.",0.2558139534883721,0.8908436567928721,10,13626.394799910486
+2026-01-10T04:15:48.941038,Chunk-2048_Overlap-512,2048,512,1,"What are the three major causes of mortality in newborn lambs, and how should hypothermia be managed in emergency situations?","The three major life-threatening problems for newborn lambs are inability to feed independently, insufficient milk supply from the ewe, and hypothermia. Hypothermia commonly occurs in cold or damp environments, especially in premature or weak lambs. Emergency treatment includes drying the lamb immediately and placing it close to the human body to reduce heat loss. In severe cases, the lamb can be immersed in warm water with the head kept above the surface to rapidly raise body temperature, followed by thorough drying and continued warming. Heat lamps are commonly used to maintain body temperature in less severe cases.","**Answer:**
+
+The three major causes of mortality in newborn lambs are:
+
+1. **Malnutrition**: This leads to hypothermia and weakness, often resulting in death within ten days.
+2. **Pneumonia**: A significant health issue that contributes to mortality, especially in young lambs.
+3. **Parasitic Infections**: While more long-term, these can impact the overall health and survival of newborn lambs.
+
+**Management of Hypothermia in Emergencies:**
+
+- **Rewarming Techniques**: Use warm water bottles or heat lamps to gradually rewarm the lamb.
+- **Dry Bedding**: Provide straw bedding to keep the lamb dry and comfortable.
+- **Nutritional Support**: Ensure the lamb receives colostrum immediately after birth. If unavailable, use milk replacers.
+
+These steps are crucial for addressing hypothermia and improving the chances of survival in newborn lambs.",0.26993865030674846,0.9041775075128033,10,6740.784200141206
+2026-01-10T04:15:58.328225,Chunk-2048_Overlap-512,2048,512,2,"Why are young goats more susceptible to clinical disease caused by Moniezia spp. infection than adult goats, and what are the common clinical signs?","Adult goats infected with Moniezia spp. usually show mild or no clinical signs, whereas young goats are more susceptible due to immature intestinal development and higher nutritional requirements. The movement of the tapeworm within the small intestine irritates the intestinal mucosa, and parasite metabolic by-products further impair digestion and nutrient absorption. Common clinical signs include reduced appetite, digestive disorders, anemia, growth retardation, weight loss, abdominal distension, and edema. Severe infections may result in death. Goats younger than eight months are therefore considered a high-risk group.","**Answer:**
+
+Young goats are more susceptible to clinical diseases caused by Moniezia spp. infections compared to adults due to several factors:
+
+1. **Immune System Immaturity**: Young goats have an immature immune system, making it harder for them to combat infections effectively.
+
+2. **First Exposure to Pathogens**: As they encounter pathogens like Moniezia for the first time, their immune defenses are not yet fully developed to handle such threats.
+
+3. **Stress Factors**: Stress from environmental changes, improper management, or nutritional issues can weaken their immune system further, increasing susceptibility.
+
+Common clinical signs of Moniezia spp. infection in young goats include:
+
+- **Diarrhea**: Often soft or watery, potentially with blood.
+- **Weight Loss and Poor Growth**: Due to nutrient absorption issues and the physical impact of the parasites.
+- **Loss of Appetite (Anorexia)**: Affected goats may show a decreased interest in feeding.
+- **Dehydration**: As a result of diarrhea and reduced fluid intake.
+- **Intestinal Irritation or Blockage**: Symptoms may include abdominal discomfort or signs of intestinal obstruction.
+
+These factors collectively make young goats more vulnerable to Moniezia infections, leading to significant health issues.",0.2912621359223301,0.8962355834914726,10,9354.646800085902
+2026-01-10T04:16:07.767280,Chunk-2048_Overlap-512,2048,512,3,"What is the life cycle of tapeworm infection in goats, and what farm management practices can reduce the risk of infection?","Common tapeworms infecting goats, such as Moniezia expansa and Moniezia benedeni, use oribatid mites as intermediate hosts. Goats become infected when they ingest mites containing infective larvae during grazing. Oribatid mites are commonly found in moist pasture and surface soil, making environmental conditions a major risk factor. Farm management strategies include avoiding grazing after rainfall or during early mornings when dew is present, implementing routine deworming programs (approximately 2–4 times per year), and promptly treating heavily infected goats followed by a second treatment two weeks later to reduce egg shedding and reinfection.","**Life Cycle of Tapeworms in Goats**
+
+1. **Definitive Host**: Goats (Capra spp.) serve as definitive hosts for tapeworm species like Taenia ovis.
+2. **Intermediate Hosts**: Typically, fleas or other arthropods act as intermediate hosts. The tapeworm's eggs are ingested by these hosts after being shed in the environment via goat feces.
+3. **Egg to Larval Stage**: Within the intermediate host, the eggs develop into larvae (oncospheres).
+4. **Ingestion by Goat**: When a goat consumes an infected intermediate host, it ingests the larvae, which then attach to the intestinal wall.
+5. **Development to Adult Tapeworm**: The larvae mature into adult tapeworms within the goat's intestine, completing the life cycle.
+
+**Farm Management Practices to Reduce Tapeworm Infection Risk**
+
+1. **Sanitation and Cleaning**: Regularly clean and disinfect goat housing areas to minimize environmental contamination with eggs and reduce intermediate host habitats.
+2. **Proper Waste Disposal**: Dispose of manure promptly to prevent attracting intermediate hosts like fleas.
+3. **Flea Control**: Use insecticides or environmental management strategies to control flea populations, disrupting the tapeworm life cycle.
+4. **Biosecurity Measures**: Implement practices to prevent the introduction of infected intermediate hosts into the goat herd.
+
+By understanding and implementing these measures, farmers can effectively reduce the risk of tapeworm infections in their goats.",0.2222222222222222,0.8560399557211993,10,9402.464300161228
+2026-01-10T04:16:14.054039,Chunk-2048_Overlap-512,2048,512,4,"Why does abortion caused by Chlamydophila abortus in goats usually occur during mid to late pregnancy, and what is the main pathological mechanism?","After initial infection, goats infected with Chlamydophila abortus usually show only mild and transient clinical signs, followed by a latent infection stage in which the pathogen persists in the uterine mucosa. During mid to late pregnancy (around day 115 of gestation), the bacteria become reactivated and replicate rapidly, causing severe necrotizing placentitis. This results in necrosis of placental cotyledons, impaired nutrient and oxygen transfer to the fetus, and ultimately fetal death, abortion, or stillbirth. Some does may show blood-tinged vaginal discharge 2–3 days before abortion, and retained placenta may also occur.","Abortion caused by *Chlamydophila abortus* in goats typically occurs during mid to late pregnancy due to the bacteria's ability to infect the placenta or maternal tissues after a certain stage of gestation. The main pathological mechanism involves the bacteria crossing the placental barrier, leading to fetal infection and triggering an immune response that results in abortion. This timing is common because the bacteria can effectively target the fetus later in pregnancy when the immune system is more active.",0.3165467625899281,0.9195983610275371,3,6252.697800053284
+2026-01-10T06:25:33.930321,Chunk-4096_Overlap-1024,4096,1024,0,What emergency measures can farmers take to improve survival when a newborn lamb cannot stand or suckle on its own?,"When a newborn lamb is too weak to stand or suckle, immediate human assistance is required. Farmers should help the lamb stand and guide its mouth to the ewe’s teat to stimulate the suckling reflex. If suckling remains difficult, colostrum can be fed using a bottle, along with vitamin solutions, sugar water, or energy supplements to increase energy levels. Thiamine injection may also enhance vitality. If the lamb still cannot feed, a veterinarian should be consulted to perform stomach tube feeding with colostrum to ensure adequate early nutrition.","When faced with a newborn lamb that cannot stand or suckle on its own, the following emergency measures can be taken:
+
+1. **Ensure Colostrum Intake**: Immediately provide the lamb with colostrum to support its health and immune system. This is crucial in the first few hours after birth.
+
+2. **Artificial Feeding**: Use a bottle or milk bucket as an alternative feeding method if the lamb cannot reach the ewe's nipple. This helps ensure the lamb receives adequate nutrition.
+
+3. **Manual Assistance for Suckling**: If the ewe has a hardened udder, manually assist the lamb to reach the teat or consider milking the ewe and feeding the lamb with expressed milk.
+
+4. **Monitor Health**: Keep an eye on the lamb's condition and consult a vet if issues persist, ensuring it receives proper care and treatment as needed.
+
+These steps aim to provide immediate support while addressing any underlying issues that prevent the lamb from suckling effectively.",0.28735632183908044,0.9252720988806351,10,11087.371899979189
+2026-01-10T06:25:41.992978,Chunk-4096_Overlap-1024,4096,1024,1,"What are the three major causes of mortality in newborn lambs, and how should hypothermia be managed in emergency situations?","The three major life-threatening problems for newborn lambs are inability to feed independently, insufficient milk supply from the ewe, and hypothermia. Hypothermia commonly occurs in cold or damp environments, especially in premature or weak lambs. Emergency treatment includes drying the lamb immediately and placing it close to the human body to reduce heat loss. In severe cases, the lamb can be immersed in warm water with the head kept above the surface to rapidly raise body temperature, followed by thorough drying and continued warming. Heat lamps are commonly used to maintain body temperature in less severe cases.","The three major causes of mortality in newborn lambs are hypothermia, E. coli infections, and bacterial pneumonia. Here's how each can be managed:
+
+1. **Hypothermia**:
+   - **Management**: Move the lamb to a warm area, provide an oral glucose solution, and use a heat lamp for warmth.
+
+2. **E. Coli Infections**:
+   - **Causes**: Exposure before colostrum intake or insufficient colostrum.
+   - **Treatment**: Administer antibiotics and provide supportive care.
+
+3. **Bacterial Pneumonia** (caused by Pasteurella species):
+   - **Management**: Treat with appropriate antibiotics and ensure the lamb receives adequate rest and nutrition to support recovery.
+
+These steps can help address the leading causes of mortality in newborn lambs, ensuring better survival rates.",0.24050632911392406,0.8857277195728742,10,8014.558300143108
+2026-01-10T06:25:50.262704,Chunk-4096_Overlap-1024,4096,1024,2,"Why are young goats more susceptible to clinical disease caused by Moniezia spp. infection than adult goats, and what are the common clinical signs?","Adult goats infected with Moniezia spp. usually show mild or no clinical signs, whereas young goats are more susceptible due to immature intestinal development and higher nutritional requirements. The movement of the tapeworm within the small intestine irritates the intestinal mucosa, and parasite metabolic by-products further impair digestion and nutrient absorption. Common clinical signs include reduced appetite, digestive disorders, anemia, growth retardation, weight loss, abdominal distension, and edema. Severe infections may result in death. Goats younger than eight months are therefore considered a high-risk group.","The susceptibility of young goats to clinical disease caused by Moniezia spp. infection can be attributed to their immature immune systems and underdeveloped digestive systems, which make them more vulnerable to parasitic infections. Common signs of Moniezia infection in young goats include diarrhea, weight loss, and abdominal discomfort. While the provided context does not specifically address Moniezia spp., it is important to consider these factors when assessing susceptibility and clinical signs in young goats.",0.2900763358778626,0.9112134131190404,9,8228.748199995607
+2026-01-10T06:25:58.874257,Chunk-4096_Overlap-1024,4096,1024,3,"What is the life cycle of tapeworm infection in goats, and what farm management practices can reduce the risk of infection?","Common tapeworms infecting goats, such as Moniezia expansa and Moniezia benedeni, use oribatid mites as intermediate hosts. Goats become infected when they ingest mites containing infective larvae during grazing. Oribatid mites are commonly found in moist pasture and surface soil, making environmental conditions a major risk factor. Farm management strategies include avoiding grazing after rainfall or during early mornings when dew is present, implementing routine deworming programs (approximately 2–4 times per year), and promptly treating heavily infected goats followed by a second treatment two weeks later to reduce egg shedding and reinfection.","**Life Cycle of Tapeworm Infection in Goats and Farm Management Practices**
+
+**Life Cycle:**
+1. **Infection:** Tapeworms infect goats through ingestion of contaminated feed or water containing intermediate hosts, often fleas or other insects.
+2. **Eggs to Larvae:** Eggs are passed in the goat's feces. These eggs hatch into larvae that develop within an intermediate host (e.g., fleas).
+3. **Intermediate Host Infection:** The larvae mature within the intermediate host.
+4. **Ingestion by Goat:** When the goat ingests the infected intermediate host, the tapeworm completes its life cycle in the goat's intestine.
+
+**Farm Management Practices to Reduce Risk:**
+1. **Deworming:** Regularly treat goats with appropriate anthelmintics to control tapeworm infections.
+2. **Sanitation:** Maintain clean feeding and watering areas to prevent contamination by infected hosts.
+3. **Control Intermediate Hosts:** Implement measures to reduce flea or beetle populations, such as environmental cleaning and pest control.
+4. **Waste Disposal:** Properly dispose of waste materials to break the life cycle and prevent reinfestation.
+
+These practices are based on general parasitology principles since specific details about tapeworms in goats were not provided in the context.",0.19801980198019803,0.8589165813938191,10,8570.097099989653
+2026-01-10T06:26:06.841672,Chunk-4096_Overlap-1024,4096,1024,4,"Why does abortion caused by Chlamydophila abortus in goats usually occur during mid to late pregnancy, and what is the main pathological mechanism?","After initial infection, goats infected with Chlamydophila abortus usually show only mild and transient clinical signs, followed by a latent infection stage in which the pathogen persists in the uterine mucosa. During mid to late pregnancy (around day 115 of gestation), the bacteria become reactivated and replicate rapidly, causing severe necrotizing placentitis. This results in necrosis of placental cotyledons, impaired nutrient and oxygen transfer to the fetus, and ultimately fetal death, abortion, or stillbirth. Some does may show blood-tinged vaginal discharge 2–3 days before abortion, and retained placenta may also occur.","Abortion caused by *Chlamydophila abortus* in goats typically occurs during mid to late pregnancy due to the bacteria's ability to establish a latent infection early on. Initially, the infection may not trigger an immediate response, allowing it to persist until later stages of pregnancy when it becomes more severe. The pathological mechanism involves the bacteria infecting placental or fetal tissues, leading to inflammation and disruption of nutrient exchange between mother and fetus. This immune-mediated response can result in abortion as a protective measure for the mother's health. Thus, the delayed onset of abortion is likely due to the bacteria evading detection until mid-pregnancy when their activity triggers the necessary pathological changes.",0.2608695652173913,0.9259501592175204,10,7906.929299933836

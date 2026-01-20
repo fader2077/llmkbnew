@@ -1,0 +1,788 @@
+experiment,hop,top_k,question_id,question,reference_answer,predicted_answer,num_chunks,latency_ms,f1_score,exact_match,cosine_similarity,is_effective
+Hop-0_TopK-5,0,5,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.",The main dairy goat breeds registered by the American Dairy Goat Association include the Saanen and the Nubian.,5,7639.0518001280725,0.11764705882352941,0,0.5992879811041351,1
+Hop-0_TopK-5,0,5,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.",The Alpine breed does not have any mentioned advantages in the provided context.,5,1865.0555000640452,0.0,0,0.5964353552710016,1
+Hop-0_TopK-5,0,5,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.",The Nubian goat has a white coat with brown markings.,5,7938.549199840054,0.3333333333333333,0,0.598834461069064,1
+Hop-0_TopK-5,0,5,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","For each additional kilogram of milk produced, 0.5 kg of concentrate should be added.",5,1963.9987999107689,0.4375,0,0.8981161543852575,1
+Hop-0_TopK-5,0,5,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach assists in digesting feed through four compartments: rumen, reticulum, omasum, and abomasum. Each compartment breaks down the food step-by-step using microorganisms to convert plant fiber, nitrogen, and other nutrients into absorbable forms for the small intestine.",5,2334.6859999001026,0.06779661016949154,0,0.7361904637982655,1
+Hop-0_TopK-5,0,5,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","Wash your hands, wash and massage the udder, and soak the nipples in iodine solution.",5,2368.238899856806,0.11428571428571427,0,0.6892334486619087,1
+Hop-0_TopK-5,0,5,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis commonly occurs in densely confined sheep environments with poor management, allowing Mycobacterium bovis and Mycobacterium avium to thrive.",5,3579.900899901986,0.2,0,0.7609312796636325,1
+Hop-0_TopK-5,0,5,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"Secondary bacterial infections can lead to severe health complications, such as septicemia, reproductive failures, chronic diseases, abscesses, and systemic issues.",5,2519.337500212714,0.19354838709677416,0,0.5969020995971523,1
+Hop-0_TopK-5,0,5,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.",CAE infection is less common in regions with strong biosecurity measures and effective disease monitoring.,5,3616.2312999367714,0.23076923076923075,0,0.6607982711862436,1
+Hop-0_TopK-5,0,5,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In early lactation, goats require a higher crude protein diet (18.5%) compared to mid-lactation, where 16% crude protein suffices.",5,2293.309799861163,0.24,0,0.7007594200539813,1
+Hop-0_TopK-5,0,5,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","Goats deficient in vitamin A experience corneal opacity, leading to vision problems.",5,1714.961800025776,0.16,0,0.6883377095178168,1
+Hop-0_TopK-5,0,5,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided to meet goats' and sheep's essential metabolic needs, supporting functions like calcium absorption, reproductive health, and tissue development.",5,2746.571799973026,0.20512820512820512,0,0.6836511271136141,1
+Hop-0_TopK-5,0,5,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters in exercise yards are important for providing relief from heat stress, allowing goats to move freely and graze comfortably without overcrowding.",5,2935.039399890229,0.26315789473684204,0,0.8687343244022995,1
+Hop-0_TopK-5,0,5,13,What type of animal is a meat goat?,A small-sized ruminant.,A meat goat is a type of goat.,5,1834.5755999907851,0.2,0,0.6237487651113308,1
+Hop-0_TopK-5,0,5,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.",The efficiency of nutrient utilization is primarily determined by the availability and sufficiency of energy.,5,1953.0519999098033,0.07142857142857144,0,0.7143117133136083,1
+Hop-0_TopK-10,0,10,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) include:
+
+1. **Nubian Goats**: Known for their high milk production and strong udders, Nubians are popular in regions like Taiwan, where they were imported from countries such as the US, Australia, and New Zealand.
+
+2. **Toggenburg Goats**: Originally from Switzerland, these goats are recognized for their long lactation periods and high-quality milk.
+
+3. **LaMncha Goats**: Developed in the US through crossbreeding, LaMnchas are known for their distinctive ear shape and are registered by the ADGA.
+
+4. **Oberhasli Goats**: Originating from Switzerland as Alpine goats, they have a unique coat pattern and are less common in the US but still recognized by the ADGA.
+
+It's important to note that while the context initially mentioned Toggenburg sheep, which might be a typo, all listed breeds are indeed goats registered under the ADGA.",10,4091.554299928248,0.0,0,0.5917092644570534,1
+Hop-0_TopK-10,0,10,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed (Oberhasli) offers several advantages:
+
+1. Thinner frame compared to the French Albaine.
+2. Gentler temperament.
+3. Alert and energetic appearance.
+4. Medium size with specific height and weight.
+5. High milk production, averaging 725 kg in 305 days.",10,2993.3968000113964,0.10344827586206896,0,0.7370099765850341,1
+Hop-0_TopK-10,0,10,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat typically has a coat that is solid in color, often black or brown, with lighter patches or markings, such as white or tan. This characteristic is common among many goat breeds and contributes to their distinctive appearance.",10,2534.7534001339227,0.17857142857142858,0,0.652062835401618,1
+Hop-0_TopK-10,0,10,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","To determine the amount of concentrate needed for each additional kilogram of milk production through challenge feeding, follow these steps:
+
+1. **Understand Challenge Feeding**: This method involves supplementing an ewe's diet with concentrate to stimulate increased milk production beyond normal levels.
+
+2. **Review the Given Information**:
+   - For every additional kilogram of milk produced, add 0.5 kg of concentrate.
+   - Additionally, an extra 250 to 500 grams of concentrate can be fed depending on specific circumstances.
+
+3. **Determine the Primary Concentrate Addition**: The primary step in challenge feeding is adding 0.5 kg of concentrate for each additional kilogram of milk produced.
+
+**Answer**: For every additional kilogram of milk produced, you should add at least 0.5 kg of concentrate as part of the challenge feeding process.",10,4430.350699927658,0.2736842105263158,0,0.8264862347404835,1
+Hop-0_TopK-10,0,10,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach plays a crucial role in digesting feed through its four-chambered structure. The first two chambers, the rumen and reticulum, break down the feed using microbes, releasing nutrients like fatty acids. These are absorbed via the ruminal wall. The omasum then mixes digesta with gastric acid from the abomasum, further breaking down proteins into peptides and amino acids. Finally, these are absorbed through the small intestine for complete nutrient utilization. This multi-stage process efficiently processes the feed, enhancing digestion compared to simpler stomachs.",10,3492.6285999827087,0.08695652173913043,0,0.7329743035502061,1
+Hop-0_TopK-10,0,10,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","During pre-milking teat dipping, it is essential to follow these steps:
+
+1. **Clean the Teats**: Use a clean cloth or paper towel to thoroughly clean the teats before milking.
+2. **Apply Disinfectant**: Dip each teat into a suitable disinfectant solution for approximately 20-30 seconds. Ensure the disinfectant is effective against common pathogens like Streptococci and E. coli.
+3. **Wipe Dry**: After dipping, wipe the teats dry with a clean cloth or paper towel to prevent contamination from residual moisture.
+
+This process helps in preventing environmental mastitis and ensures that the udders are disinfected before milking, reducing the risk of infection and improving overall herd health.",10,3889.651299919933,0.26666666666666666,0,0.7845199065292767,1
+Hop-0_TopK-10,0,10,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis, specifically caused by Corynebacterium pseudotuberculosis leading to caseous lymphadenitis, commonly occurs under the following conditions:
+
+1. **Close Animal Contact**: The disease spreads through direct contact between infected and healthy animals.
+2. **Contaminated Environments**: Exposure to infected secretions, such as milk or saliva, or to contaminated equipment and premises.
+3. **Poor Sanitation Practices**: Lack of proper disinfection and sanitation facilities can facilitate the spread of the disease.
+
+These conditions highlight the importance of isolating infected animals and implementing effective hygiene and disinfection measures to prevent the occurrence and spread of tuberculosis.",10,4169.552800012752,0.04938271604938272,0,0.6656803319179532,1
+Hop-0_TopK-10,0,10,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections are severe and can lead to life-threatening complications. Specific examples include:
+
+1. **E. coli Septicemia**: Causes invasive infections leading to meningoencephalitis, resulting in symptoms like recumbency, convulsions, and panophthalmitis, which can be fatal.
+
+2. **Pasteurella Pneumonia**: Acute and often fatal, characterized by severe lung lesions with high mortality rates.
+
+3. **Listeriosis (L. monocytogenes)**: Can cause encephalitis, stillbirths, and mastitis, posing significant health risks.
+
+4. **Q Fever (Coxiella burnetii)**: Leads to miscarriages or stillbirths due to placental infection, affecting reproductive health.
+
+These infections underscore the importance of timely diagnosis and treatment to prevent severe outcomes.",10,3836.676700040698,0.08421052631578947,0,0.6038000653530429,1
+Hop-0_TopK-10,0,10,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In regions like Africa, CAE is less common due to differences in milking practices. This reduction in transmission through milk contributes to lower prevalence rates there.",10,2405.711199855432,0.411764705882353,0,0.8970425406488581,1
+Hop-0_TopK-10,0,10,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"The protein requirements for goats vary depending on their stage of lactation:
+
+1. **Early Lactation**: During this phase, goats require 18-20% protein in their diet to support initial milk production and the health of the offspring.
+
+2. **Mid-Lactation**: As they continue into mid-lactation, goats' protein needs drop slightly to 16-18%. This phase focuses on maintaining consistent milk output without the same intensity as the early stages.
+
+Understanding these differences is crucial for ensuring that goats receive the appropriate nutritional support during each stage of lactation.",10,2723.7841999158263,0.08333333333333333,0,0.6565757791842896,1
+Hop-0_TopK-10,0,10,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","The primary vision issue linked to vitamin A deficiency in goats is night blindness, which can potentially lead to total loss of sight if untreated.",10,1911.5573999006301,0.2702702702702703,0,0.711081347195827,1
+Hop-0_TopK-10,0,10,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential for the health and well-being of meat sheep, supporting their enzyme function, immune response, growth, reproduction, and overall health. Copper aids in iron metabolism and connective tissue formation, while zinc facilitates protein synthesis and wound healing. Vitamins A, D, E, and B complex contribute to vision, bone development, cell membrane protection, and energy metabolism, respectively. While some vitamins can be synthesized by rumen microbes, others like vitamin B and C may require supplementation, especially in young animals or during lactation. This ensures that sheep maintain optimal health, growth, and productivity despite challenges such as high carbohydrate intake.",10,3259.5801998395473,0.07619047619047618,0,0.6529899089864366,1
+Hop-0_TopK-10,0,10,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters are important in exercise yards because they provide animals with relief from direct sunlight, helping to prevent heat stress and maintain their health and well-being. They also create a more comfortable environment for the animals, which is essential for their overall welfare.
+</think>
+
+- Shade shelters are crucial in exercise yards as they offer protection from the sun's rays, preventing heat stress in animals.
+- Providing shade helps maintain the animals' health and well-being by creating a more comfortable living environment.",10,2550.634300103411,0.19178082191780824,0,0.7777979627910384,1
+Hop-0_TopK-10,0,10,13,What type of animal is a meat goat?,A small-sized ruminant.,"Based on the provided context, a ""meat goat"" refers to any breed of goat that is primarily raised for its meat production. The specific breeds mentioned include Nubian sheep (though they are typically considered dairy goats), Boer goats, and Taiwan Black Goats, all of which are bred for their high-quality meat.
+
+**Answer:** A meat goat is a type of goat breed raised specifically for the production of meat, such as Nubians, Boer goats, or Taiwan Black Goats.",10,2802.210600115359,0.03389830508474576,0,0.6148125439055685,1
+Hop-0_TopK-10,0,10,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization is determined by several factors:
+
+1. **Ruminal Microorganisms**: These break down fiber into monosaccharides.
+2. **Stomach Structure**: The rumen, reticulum, omasum, and abomasum work together to process and absorb nutrients.
+3. **Bypass Protein**: This protein bypasses the rumen for digestion in the abomasum.
+4. **Acid-Washed Fiber**: Influences crude protein availability.
+5. **Compounds Affecting Digestion**: Such as tannins, which can reduce ruminal efficiency.
+
+6. **Mechanisms of Absorption**: Active vs. passive transport affects nutrient uptake.",10,4392.104800092056,0.06976744186046512,0,0.6685569182157849,1
+Hop-0_TopK-15,0,15,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) are:
+
+1. **Saanen**
+2. **Alpine**
+3. **Toggenburg**
+4. **Nubian**
+5. **LaMancha**
+6. **Oberhasli**
+
+These breeds are recognized for their contributions to dairy production and are prominent in the United States, with different regions favoring specific types based on their characteristics and uses.",15,3470.0358000118285,0.0,0,0.6064034197120427,1
+Hop-0_TopK-15,0,15,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed offers several advantages, primarily in terms of productivity and physical characteristics. Here is an organized summary of these benefits:
+
+1. **High Milk Production**: The Alpine breed is known for its high milk production capacity, making it a valuable asset for dairy operations.
+
+2. **Good Reproductive Performance**: They exhibit strong reproductive performance, contributing to higher litter or lamb production rates.
+
+3. **Desirable Physical Characteristics**: Their specific features, such as a straight nose and erect ears, are aesthetically pleasing and serve functional purposes like efficient breathing, which can be advantageous in certain markets.
+
+4. **Solid Build**: As a medium to large breed, Alpines have a robust build that supports carrying capacity and efficiency in milk production.
+
+These traits collectively make the Alpine breed a preferred choice for both functional and market-driven reasons across different regions, including France and Taiwan.",15,4132.189300144091,0.09302325581395349,0,0.7389368661848201,1
+Hop-0_TopK-15,0,15,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat has a coat color that is not fixed, with brown being the most common. Other colors may also be present, but they are not specified in the given context.",15,2382.6260999776423,0.40816326530612246,0,0.7328438235446024,1
+Hop-0_TopK-15,0,15,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","Based on the provided information, the exact amount of concentrate required per kilogram of milk produced through challenge feeding isn't explicitly stated. However, it is suggested that providing a high concentration of concentrate during early lactation can enhance milk production. The approach should consider meeting specific nutrient requirements, such as balancing calcium-to-phosphorus ratios and ensuring adequate protein intake. Therefore, the amount of concentrate added would depend on the individual needs of the animal based on factors like stage of lactation and overall health.
+
+**Answer:** The exact amount of concentrate needed per kilogram of milk isn't provided but should be determined by meeting nutrient requirements specific to each animal's needs during challenge feeding.",15,7109.215100063011,0.06382978723404255,0,0.7715441424060357,1
+Hop-0_TopK-15,0,15,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is structured with four chambers that work together to aid in digestion:
+
+1. **Rumen**: The first chamber, where food is taken in and fermented by bacteria.
+2. **Reticulum**: Stores chewed food (chimeal) for further processing.
+3. **Omasum**: Breaks down the chimeal into smaller particles with its finger-like structures.
+4. **Abomasum**: Acts like a human stomach, continuing digestion.
+
+This four-chamber system ensures that goats can efficiently break down and utilize their feed, supporting their health and productivity.",15,2693.219499895349,0.13186813186813187,0,0.7294600674410192,1
+Hop-0_TopK-15,0,15,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","In the context of managing dairy sheep, particularly focusing on pre-milking teat dipping, the key action involves cleaning and disinfecting each teat. This process helps prevent mastitis by reducing the risk of bacterial infections. Therefore, during pre-milking, it is essential to thoroughly clean each teat with an appropriate antiseptic solution to ensure the health and well-being of the animals and the quality of the milk produced.",15,3485.3825999889523,0.16,0,0.7577530799078025,1
+Hop-0_TopK-15,0,15,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis in sheep typically occurs under the following conditions:
+
+1. **Respiratory Transmission**: The primary route is via respiratory droplets when an infected animal coughs, sneezes, or exhales. This method of transmission is common among animals and can also affect humans, making it a zoonotic disease.
+
+2. **Ingestion of Contaminated Materials**: Infected sheep may transmit the disease through the digestive tract by consuming contaminated milk, feces, urine, feed, or water. This route is particularly concerning because it highlights the risk of infection even when animals appear healthy.
+
+3. **Culling Policies**: To prevent the spread of tuberculosis, infected animals are often culled, typically when they show mild signs of illness. This proactive approach helps in controlling the disease by reducing the number of infected individuals in the herd.
+
+4. **Atypical Mycobacteria**: While M. bovis is the primary cause, other mycobacteria such as M. tuberculosis and M. avium can also contribute to tuberculosis infections, though they are less common.
+
+In summary, tuberculosis in sheep spreads through respiratory droplets and contaminated materials, with infected animals being culled to mitigate the disease's spread. This understanding underscores the importance of preventive measures and surveillance to control zoonotic diseases effectively.",15,4190.396399935707,0.05755395683453238,0,0.6917832668504931,1
+Hop-0_TopK-15,0,15,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections in sheep and lambs can be severe and multifaceted. These infections often complicate existing conditions, leading to a worsening of symptoms, increased suffering, and treatment challenges. Potential outcomes may include systemic issues, organ failure, and in severe cases, death. It is crucial for farmers to recognize these risks and implement preventive measures to mitigate the impact on animal health.",15,3461.6068999748677,0.15625,0,0.7356663510235587,1
+Hop-0_TopK-15,0,15,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","**Answer:**
+
+CAE (Caprine Arthritis Encephalitis) is less common in regions with strong animal health surveillance, strict biosecurity measures, and robust prevention practices. These areas likely have higher awareness of the disease, leading to timely culling of infected animals and reduced transmission rates. Countries with established vaccination protocols for other diseases, such as brucellosis, may also experience lower CAE prevalence due to overall healthier livestock populations.",15,4166.72240011394,0.1408450704225352,0,0.7079968539238044,1
+Hop-0_TopK-15,0,15,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"**Protein Requirements During Goat Lactation:**
+
+1. **Early Lactation:** 
+   - Higher protein intake is essential to support increased milk production.
+   - Increasing digestible crude protein in feed can enhance fat-corrected milk output by 5-10%.
+
+2. **Mid-Lactation:**
+   - Protein supplementation has minimal effect on milk yield once lactation is established.
+   - Protein requirements remain relatively stable as the goat's body adjusts to lactation demands.
+
+This summary highlights the differing protein needs at various stages of a goat's lactation period.",15,3274.6081000659615,0.08823529411764708,0,0.6664045737339381,1
+Hop-0_TopK-15,0,15,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","The vision problem associated with vitamin A deficiency in goats is **night blindness**, which affects their ability to see clearly in low-light conditions.",15,1857.8188000246882,0.1142857142857143,0,0.6771457993026435,1
+Hop-0_TopK-15,0,15,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential components of a sheep's diet due to their critical roles in maintaining overall health, supporting growth and development, and ensuring reproductive success. Here’s a breakdown of why they are vital:
+
+1. **Vitality and Health**: Vitamins A, E, B complex, and C, along with trace minerals like zinc, copper, cobalt, and selenium, are essential for immune function, energy production, and reducing oxidative stress, which helps maintain the sheep's overall health.
+
+2. **Growth and Development**: These nutrients aid in bone development, tissue growth, and the proper functioning of enzymes required for metabolism, ensuring healthy growth and development of lambs.
+
+3. **Reproductive Health**: Adequate levels of these nutrients are crucial for reproductive success, including the health of the sheep and their offspring, preventing issues like miscarriages or stillbirths.
+
+4. **Prevention of Deficiencies**: Deficiencies in these nutrients can lead to severe health problems such as night blindness, white muscle disease, and metabolic disorders, which can reduce productivity and cause economic losses.
+
+In summary, providing trace minerals and vitamins ensures that sheep remain healthy, grow properly, and reproduce successfully, thereby enhancing the overall productivity and well-being of the flock.",15,3668.5462999157608,0.055944055944055944,0,0.6882226998175937,1
+Hop-0_TopK-15,0,15,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"**Importance of Shade Shelters in Exercise Yards**
+
+Shade shelters play a crucial role in enhancing the well-being of animals used in exercise yards. Here are the key reasons for their importance:
+
+1. **Heat Protection**: In environments with intense sunlight, shade shelters provide relief from excessive heat, preventing heat stress and ensuring animals remain comfortable during physical activity.
+
+2. **Comfort and Well-Being**: By offering shaded areas, these shelters reduce stress caused by high temperatures, contributing to a more relaxed and healthier environment for the animals.
+
+3. **Productivity Enhancement**: Adequate shading can improve animal performance and productivity, as it helps maintain optimal body temperature and reduces fatigue from heat exposure.
+
+In summary, shade shelters are essential for safeguarding animals in exercise yards, ensuring their health and efficiency.",15,3632.257099961862,0.18867924528301885,0,0.7823599087705309,1
+Hop-0_TopK-15,0,15,13,What type of animal is a meat goat?,A small-sized ruminant.,"Based on the provided context, a ""meat goat"" refers to any goat breed raised primarily or secondarily for its meat. The specific breeds mentioned, such as Nubian, Boer, and Taiwan Black goats, are examples of such animals used for both dairy and meat purposes. Therefore, a meat goat is a goat that is bred with an emphasis on producing high-quality meat, which may also have additional uses like providing milk or other products.
+
+**Answer:** A meat goat is any goat breed raised primarily or secondarily for its meat, including breeds like Nubian, Boer, and Taiwan Black goats.",15,3342.936099972576,0.029850746268656716,0,0.6025814001104043,1
+Hop-0_TopK-15,0,15,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization in animals, such as sheep, is influenced by several key factors:
+
+1. **Feed Quality and Composition**: The nutritional content of the feed, including its protein, calcium-to-phosphorus ratio, and levels of trace minerals and vitamins, plays a crucial role. A balanced intake ensures that essential nutrients are available for absorption and utilization.
+
+2. **Digestibility and Absorption**: The ability of an animal to digest and absorb nutrients from their feed is influenced by factors like the presence of enzymes and the structure of the digestive system. Efficient digestion enhances nutrient utilization.
+
+3. **Mineral Balance**: Maintaining a proper balance between minerals such as calcium, phosphorus, and others is vital. An imbalance can hinder nutrient absorption or lead to deficiencies, affecting overall health and productivity.
+
+4. **Vitamin Supplementation**: Adequate levels of vitamins like vitamin A are necessary for normal bodily functions and reproductive health, which in turn supports efficient nutrient utilization.
+
+5. **Overall Health and Management Practices**: Factors such as disease prevention, stress management, and proper housing can also impact how effectively nutrients are utilized by the animal.
+
+In summary, the efficiency of nutrient utilization is determined by the interplay of these factors, each contributing to the animal's ability to use available nutrients effectively.",15,3908.5683000739664,0.0821917808219178,0,0.7119780904522583,1
+Hop-1_TopK-5,1,5,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.",The main dairy goat breeds registered by the American Dairy Goat Association are Nubian and Saanen.,5,2828.7786000873893,0.0,0,0.6176365656367729,1
+Hop-1_TopK-5,1,5,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.",The Alpine breed does not have any mentioned advantages in the provided context.,5,1883.7765001226217,0.0,0,0.5964353552710016,1
+Hop-1_TopK-5,1,5,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.",The Nubian goat has a white coat with brown markings.,5,8030.032499926165,0.3333333333333333,0,0.598834461069064,1
+Hop-1_TopK-5,1,5,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","For each additional kilogram of milk produced, 0.5 kg of concentrate should be added.",5,2022.776700090617,0.4375,0,0.8981161543852575,1
+Hop-1_TopK-5,1,5,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach assists in digesting feed through four compartments: rumen, reticulum, omasum, and abomasum. Each compartment breaks down the food step-by-step using microorganisms to convert plant fiber, nitrogen, and other nutrients into absorbable forms for the small intestine.",5,2354.4036999810487,0.06779661016949154,0,0.7361904637982655,1
+Hop-1_TopK-5,1,5,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","Wash your hands, wash and massage the udder, and soak the nipples in iodine solution.",5,2421.3101000059396,0.11428571428571427,0,0.6892334486619087,1
+Hop-1_TopK-5,1,5,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis commonly occurs in densely confined sheep environments with poor management, allowing Mycobacterium bovis and Mycobacterium avium to thrive.",5,3648.7334000412375,0.2,0,0.7609312796636325,1
+Hop-1_TopK-5,1,5,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"Secondary bacterial infections can lead to severe health complications, such as septicemia, reproductive failures, chronic diseases, abscesses, and systemic issues.",5,2523.486799793318,0.19354838709677416,0,0.5969020995971523,1
+Hop-1_TopK-5,1,5,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.",CAE infection is less common in regions with strong biosecurity measures and effective disease monitoring.,5,3637.9976000171155,0.23076923076923075,0,0.6607982711862436,1
+Hop-1_TopK-5,1,5,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In early lactation, goats require a higher crude protein diet (18.5%) compared to mid-lactation, where 16% crude protein suffices.",5,2280.740899965167,0.24,0,0.7007594200539813,1
+Hop-1_TopK-5,1,5,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","Goats deficient in vitamin A experience corneal opacity, leading to vision problems.",5,1683.251400012523,0.16,0,0.6883377095178168,1
+Hop-1_TopK-5,1,5,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided to meet goats' and sheep's essential metabolic needs, supporting functions like calcium absorption, reproductive health, and tissue development.",5,2719.1353999078274,0.20512820512820512,0,0.6836511271136141,1
+Hop-1_TopK-5,1,5,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters in exercise yards are important for providing relief from heat stress, allowing goats to move freely and graze comfortably without overcrowding.",5,2918.2313000783324,0.26315789473684204,0,0.8687343244022995,1
+Hop-1_TopK-5,1,5,13,What type of animal is a meat goat?,A small-sized ruminant.,A meat goat is a type of goat.,5,1869.991899933666,0.2,0,0.6237487651113308,1
+Hop-1_TopK-5,1,5,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.",The efficiency of nutrient utilization is primarily determined by the availability and sufficiency of energy.,5,1996.2752999272197,0.07142857142857144,0,0.7143117133136083,1
+Hop-1_TopK-10,1,10,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) include:
+
+1. **Nubian Goats**: Known for their high milk production and strong udders, Nubians are popular in regions like Taiwan, where they were imported from countries such as the US, Australia, and New Zealand.
+
+2. **Toggenburg Goats**: Originally from Switzerland, these goats are recognized for their long lactation periods and high-quality milk.
+
+3. **LaMncha Goats**: Developed in the US through crossbreeding, LaMnchas are known for their distinctive ear shape and are registered by the ADGA.
+
+4. **Oberhasli Goats**: Originating from Switzerland as Alpine goats, they have a unique coat pattern and are less common in the US but still recognized by the ADGA.
+
+It's important to note that while the context initially mentioned Toggenburg sheep, which might be a typo, all listed breeds are indeed goats registered under the ADGA.",10,4100.403500022367,0.0,0,0.5917092644570534,1
+Hop-1_TopK-10,1,10,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed (Oberhasli) offers several advantages:
+
+1. Thinner frame compared to the French Albaine.
+2. Gentler temperament.
+3. Alert and energetic appearance.
+4. Medium size with specific height and weight.
+5. High milk production, averaging 725 kg in 305 days.",10,3020.857400028035,0.10344827586206896,0,0.7370099765850341,1
+Hop-1_TopK-10,1,10,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat typically has a coat that is solid in color, often black or brown, with lighter patches or markings, such as white or tan. This characteristic is common among many goat breeds and contributes to their distinctive appearance.",10,2544.1024999599904,0.17857142857142858,0,0.652062835401618,1
+Hop-1_TopK-10,1,10,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","To determine the amount of concentrate needed for each additional kilogram of milk production through challenge feeding, follow these steps:
+
+1. **Understand Challenge Feeding**: This method involves supplementing an ewe's diet with concentrate to stimulate increased milk production beyond normal levels.
+
+2. **Review the Given Information**:
+   - For every additional kilogram of milk produced, add 0.5 kg of concentrate.
+   - Additionally, an extra 250 to 500 grams of concentrate can be fed depending on specific circumstances.
+
+3. **Determine the Primary Concentrate Addition**: The primary step in challenge feeding is adding 0.5 kg of concentrate for each additional kilogram of milk produced.
+
+**Answer**: For every additional kilogram of milk produced, you should add at least 0.5 kg of concentrate as part of the challenge feeding process.",10,4358.332199975848,0.2736842105263158,0,0.8264862347404835,1
+Hop-1_TopK-10,1,10,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach plays a crucial role in digesting feed through its four-chambered structure. The first two chambers, the rumen and reticulum, break down the feed using microbes, releasing nutrients like fatty acids. These are absorbed via the ruminal wall. The omasum then mixes digesta with gastric acid from the abomasum, further breaking down proteins into peptides and amino acids. Finally, these are absorbed through the small intestine for complete nutrient utilization. This multi-stage process efficiently processes the feed, enhancing digestion compared to simpler stomachs.",10,3467.344499891624,0.08695652173913043,0,0.7329743035502061,1
+Hop-1_TopK-10,1,10,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","During pre-milking teat dipping, it is essential to follow these steps:
+
+1. **Clean the Teats**: Use a clean cloth or paper towel to thoroughly clean the teats before milking.
+2. **Apply Disinfectant**: Dip each teat into a suitable disinfectant solution for approximately 20-30 seconds. Ensure the disinfectant is effective against common pathogens like Streptococci and E. coli.
+3. **Wipe Dry**: After dipping, wipe the teats dry with a clean cloth or paper towel to prevent contamination from residual moisture.
+
+This process helps in preventing environmental mastitis and ensures that the udders are disinfected before milking, reducing the risk of infection and improving overall herd health.",10,3909.7284998279065,0.26666666666666666,0,0.7845199065292767,1
+Hop-1_TopK-10,1,10,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis, specifically caused by Corynebacterium pseudotuberculosis leading to caseous lymphadenitis, commonly occurs under the following conditions:
+
+1. **Close Animal Contact**: The disease spreads through direct contact between infected and healthy animals.
+2. **Contaminated Environments**: Exposure to infected secretions, such as milk or saliva, or to contaminated equipment and premises.
+3. **Poor Sanitation Practices**: Lack of proper disinfection and sanitation facilities can facilitate the spread of the disease.
+
+These conditions highlight the importance of isolating infected animals and implementing effective hygiene and disinfection measures to prevent the occurrence and spread of tuberculosis.",10,4150.730499997735,0.04938271604938272,0,0.6656803319179532,1
+Hop-1_TopK-10,1,10,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections are severe and can lead to life-threatening complications. Specific examples include:
+
+1. **E. coli Septicemia**: Causes invasive infections leading to meningoencephalitis, resulting in symptoms like recumbency, convulsions, and panophthalmitis, which can be fatal.
+
+2. **Pasteurella Pneumonia**: Acute and often fatal, characterized by severe lung lesions with high mortality rates.
+
+3. **Listeriosis (L. monocytogenes)**: Can cause encephalitis, stillbirths, and mastitis, posing significant health risks.
+
+4. **Q Fever (Coxiella burnetii)**: Leads to miscarriages or stillbirths due to placental infection, affecting reproductive health.
+
+These infections underscore the importance of timely diagnosis and treatment to prevent severe outcomes.",10,3841.170199913904,0.08421052631578947,0,0.6038000653530429,1
+Hop-1_TopK-10,1,10,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In regions like Africa, CAE is less common due to differences in milking practices. This reduction in transmission through milk contributes to lower prevalence rates there.",10,2428.1228000763804,0.411764705882353,0,0.8970425406488581,1
+Hop-1_TopK-10,1,10,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"The protein requirements for goats vary depending on their stage of lactation:
+
+1. **Early Lactation**: During this phase, goats require 18-20% protein in their diet to support initial milk production and the health of the offspring.
+
+2. **Mid-Lactation**: As they continue into mid-lactation, goats' protein needs drop slightly to 16-18%. This phase focuses on maintaining consistent milk output without the same intensity as the early stages.
+
+Understanding these differences is crucial for ensuring that goats receive the appropriate nutritional support during each stage of lactation.",10,2721.2445000186563,0.08333333333333333,0,0.6565757791842896,1
+Hop-1_TopK-10,1,10,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","The primary vision issue linked to vitamin A deficiency in goats is night blindness, which can potentially lead to total loss of sight if untreated.",10,1905.8473999612033,0.2702702702702703,0,0.711081347195827,1
+Hop-1_TopK-10,1,10,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential for the health and well-being of meat sheep, supporting their enzyme function, immune response, growth, reproduction, and overall health. Copper aids in iron metabolism and connective tissue formation, while zinc facilitates protein synthesis and wound healing. Vitamins A, D, E, and B complex contribute to vision, bone development, cell membrane protection, and energy metabolism, respectively. While some vitamins can be synthesized by rumen microbes, others like vitamin B and C may require supplementation, especially in young animals or during lactation. This ensures that sheep maintain optimal health, growth, and productivity despite challenges such as high carbohydrate intake.",10,3219.731800025329,0.07619047619047618,0,0.6529899089864366,1
+Hop-1_TopK-10,1,10,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters are important in exercise yards because they provide animals with relief from direct sunlight, helping to prevent heat stress and maintain their health and well-being. They also create a more comfortable environment for the animals, which is essential for their overall welfare.
+</think>
+
+- Shade shelters are crucial in exercise yards as they offer protection from the sun's rays, preventing heat stress in animals.
+- Providing shade helps maintain the animals' health and well-being by creating a more comfortable living environment.",10,2512.522399891168,0.19178082191780824,0,0.7777979627910384,1
+Hop-1_TopK-10,1,10,13,What type of animal is a meat goat?,A small-sized ruminant.,"Based on the provided context, a ""meat goat"" refers to any breed of goat that is primarily raised for its meat production. The specific breeds mentioned include Nubian sheep (though they are typically considered dairy goats), Boer goats, and Taiwan Black Goats, all of which are bred for their high-quality meat.
+
+**Answer:** A meat goat is a type of goat breed raised specifically for the production of meat, such as Nubians, Boer goats, or Taiwan Black Goats.",10,2784.8614000249654,0.03389830508474576,0,0.6148125439055685,1
+Hop-1_TopK-10,1,10,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization is determined by several factors:
+
+1. **Ruminal Microorganisms**: These break down fiber into monosaccharides.
+2. **Stomach Structure**: The rumen, reticulum, omasum, and abomasum work together to process and absorb nutrients.
+3. **Bypass Protein**: This protein bypasses the rumen for digestion in the abomasum.
+4. **Acid-Washed Fiber**: Influences crude protein availability.
+5. **Compounds Affecting Digestion**: Such as tannins, which can reduce ruminal efficiency.
+
+6. **Mechanisms of Absorption**: Active vs. passive transport affects nutrient uptake.",10,4384.190599899739,0.06976744186046512,0,0.6685569182157849,1
+Hop-1_TopK-15,1,15,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) are:
+
+1. **Saanen**
+2. **Alpine**
+3. **Toggenburg**
+4. **Nubian**
+5. **LaMancha**
+6. **Oberhasli**
+
+These breeds are recognized for their contributions to dairy production and are prominent in the United States, with different regions favoring specific types based on their characteristics and uses.",15,3425.2540001180023,0.0,0,0.6064034197120427,1
+Hop-1_TopK-15,1,15,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed offers several advantages, primarily in terms of productivity and physical characteristics. Here is an organized summary of these benefits:
+
+1. **High Milk Production**: The Alpine breed is known for its high milk production capacity, making it a valuable asset for dairy operations.
+
+2. **Good Reproductive Performance**: They exhibit strong reproductive performance, contributing to higher litter or lamb production rates.
+
+3. **Desirable Physical Characteristics**: Their specific features, such as a straight nose and erect ears, are aesthetically pleasing and serve functional purposes like efficient breathing, which can be advantageous in certain markets.
+
+4. **Solid Build**: As a medium to large breed, Alpines have a robust build that supports carrying capacity and efficiency in milk production.
+
+These traits collectively make the Alpine breed a preferred choice for both functional and market-driven reasons across different regions, including France and Taiwan.",15,4119.025999912992,0.09302325581395349,0,0.7389368661848201,1
+Hop-1_TopK-15,1,15,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat has a coat color that is not fixed, with brown being the most common. Other colors may also be present, but they are not specified in the given context.",15,2404.7425999306142,0.40816326530612246,0,0.7328438235446024,1
+Hop-1_TopK-15,1,15,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","Based on the provided information, the exact amount of concentrate required per kilogram of milk produced through challenge feeding isn't explicitly stated. However, it is suggested that providing a high concentration of concentrate during early lactation can enhance milk production. The approach should consider meeting specific nutrient requirements, such as balancing calcium-to-phosphorus ratios and ensuring adequate protein intake. Therefore, the amount of concentrate added would depend on the individual needs of the animal based on factors like stage of lactation and overall health.
+
+**Answer:** The exact amount of concentrate needed per kilogram of milk isn't provided but should be determined by meeting nutrient requirements specific to each animal's needs during challenge feeding.",15,7021.260499954224,0.06382978723404255,0,0.7715441424060357,1
+Hop-1_TopK-15,1,15,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is structured with four chambers that work together to aid in digestion:
+
+1. **Rumen**: The first chamber, where food is taken in and fermented by bacteria.
+2. **Reticulum**: Stores chewed food (chimeal) for further processing.
+3. **Omasum**: Breaks down the chimeal into smaller particles with its finger-like structures.
+4. **Abomasum**: Acts like a human stomach, continuing digestion.
+
+This four-chamber system ensures that goats can efficiently break down and utilize their feed, supporting their health and productivity.",15,2634.0258000418544,0.13186813186813187,0,0.7294600674410192,1
+Hop-1_TopK-15,1,15,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","In the context of managing dairy sheep, particularly focusing on pre-milking teat dipping, the key action involves cleaning and disinfecting each teat. This process helps prevent mastitis by reducing the risk of bacterial infections. Therefore, during pre-milking, it is essential to thoroughly clean each teat with an appropriate antiseptic solution to ensure the health and well-being of the animals and the quality of the milk produced.",15,3455.854499945417,0.16,0,0.7577530799078025,1
+Hop-1_TopK-15,1,15,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis in sheep typically occurs under the following conditions:
+
+1. **Respiratory Transmission**: The primary route is via respiratory droplets when an infected animal coughs, sneezes, or exhales. This method of transmission is common among animals and can also affect humans, making it a zoonotic disease.
+
+2. **Ingestion of Contaminated Materials**: Infected sheep may transmit the disease through the digestive tract by consuming contaminated milk, feces, urine, feed, or water. This route is particularly concerning because it highlights the risk of infection even when animals appear healthy.
+
+3. **Culling Policies**: To prevent the spread of tuberculosis, infected animals are often culled, typically when they show mild signs of illness. This proactive approach helps in controlling the disease by reducing the number of infected individuals in the herd.
+
+4. **Atypical Mycobacteria**: While M. bovis is the primary cause, other mycobacteria such as M. tuberculosis and M. avium can also contribute to tuberculosis infections, though they are less common.
+
+In summary, tuberculosis in sheep spreads through respiratory droplets and contaminated materials, with infected animals being culled to mitigate the disease's spread. This understanding underscores the importance of preventive measures and surveillance to control zoonotic diseases effectively.",15,4249.136199941859,0.05755395683453238,0,0.6917832668504931,1
+Hop-1_TopK-15,1,15,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections in sheep and lambs can be severe and multifaceted. These infections often complicate existing conditions, leading to a worsening of symptoms, increased suffering, and treatment challenges. Potential outcomes may include systemic issues, organ failure, and in severe cases, death. It is crucial for farmers to recognize these risks and implement preventive measures to mitigate the impact on animal health.",15,3514.5585001446307,0.15625,0,0.7356663510235587,1
+Hop-1_TopK-15,1,15,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","**Answer:**
+
+CAE (Caprine Arthritis Encephalitis) is less common in regions with strong animal health surveillance, strict biosecurity measures, and robust prevention practices. These areas likely have higher awareness of the disease, leading to timely culling of infected animals and reduced transmission rates. Countries with established vaccination protocols for other diseases, such as brucellosis, may also experience lower CAE prevalence due to overall healthier livestock populations.",15,4182.625300018117,0.1408450704225352,0,0.7079968539238044,1
+Hop-1_TopK-15,1,15,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"**Protein Requirements During Goat Lactation:**
+
+1. **Early Lactation:** 
+   - Higher protein intake is essential to support increased milk production.
+   - Increasing digestible crude protein in feed can enhance fat-corrected milk output by 5-10%.
+
+2. **Mid-Lactation:**
+   - Protein supplementation has minimal effect on milk yield once lactation is established.
+   - Protein requirements remain relatively stable as the goat's body adjusts to lactation demands.
+
+This summary highlights the differing protein needs at various stages of a goat's lactation period.",15,3331.1103999149054,0.08823529411764708,0,0.6664045737339381,1
+Hop-1_TopK-15,1,15,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","The vision problem associated with vitamin A deficiency in goats is **night blindness**, which affects their ability to see clearly in low-light conditions.",15,1839.3725999630988,0.1142857142857143,0,0.6771457993026435,1
+Hop-1_TopK-15,1,15,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential components of a sheep's diet due to their critical roles in maintaining overall health, supporting growth and development, and ensuring reproductive success. Here’s a breakdown of why they are vital:
+
+1. **Vitality and Health**: Vitamins A, E, B complex, and C, along with trace minerals like zinc, copper, cobalt, and selenium, are essential for immune function, energy production, and reducing oxidative stress, which helps maintain the sheep's overall health.
+
+2. **Growth and Development**: These nutrients aid in bone development, tissue growth, and the proper functioning of enzymes required for metabolism, ensuring healthy growth and development of lambs.
+
+3. **Reproductive Health**: Adequate levels of these nutrients are crucial for reproductive success, including the health of the sheep and their offspring, preventing issues like miscarriages or stillbirths.
+
+4. **Prevention of Deficiencies**: Deficiencies in these nutrients can lead to severe health problems such as night blindness, white muscle disease, and metabolic disorders, which can reduce productivity and cause economic losses.
+
+In summary, providing trace minerals and vitamins ensures that sheep remain healthy, grow properly, and reproduce successfully, thereby enhancing the overall productivity and well-being of the flock.",15,3683.162200031802,0.055944055944055944,0,0.6882226998175937,1
+Hop-1_TopK-15,1,15,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"**Importance of Shade Shelters in Exercise Yards**
+
+Shade shelters play a crucial role in enhancing the well-being of animals used in exercise yards. Here are the key reasons for their importance:
+
+1. **Heat Protection**: In environments with intense sunlight, shade shelters provide relief from excessive heat, preventing heat stress and ensuring animals remain comfortable during physical activity.
+
+2. **Comfort and Well-Being**: By offering shaded areas, these shelters reduce stress caused by high temperatures, contributing to a more relaxed and healthier environment for the animals.
+
+3. **Productivity Enhancement**: Adequate shading can improve animal performance and productivity, as it helps maintain optimal body temperature and reduces fatigue from heat exposure.
+
+In summary, shade shelters are essential for safeguarding animals in exercise yards, ensuring their health and efficiency.",15,3583.7968999985605,0.18867924528301885,0,0.7823599087705309,1
+Hop-1_TopK-15,1,15,13,What type of animal is a meat goat?,A small-sized ruminant.,"Based on the provided context, a ""meat goat"" refers to any goat breed raised primarily or secondarily for its meat. The specific breeds mentioned, such as Nubian, Boer, and Taiwan Black goats, are examples of such animals used for both dairy and meat purposes. Therefore, a meat goat is a goat that is bred with an emphasis on producing high-quality meat, which may also have additional uses like providing milk or other products.
+
+**Answer:** A meat goat is any goat breed raised primarily or secondarily for its meat, including breeds like Nubian, Boer, and Taiwan Black goats.",15,3396.4547999203205,0.029850746268656716,0,0.6025814001104043,1
+Hop-1_TopK-15,1,15,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization in animals, such as sheep, is influenced by several key factors:
+
+1. **Feed Quality and Composition**: The nutritional content of the feed, including its protein, calcium-to-phosphorus ratio, and levels of trace minerals and vitamins, plays a crucial role. A balanced intake ensures that essential nutrients are available for absorption and utilization.
+
+2. **Digestibility and Absorption**: The ability of an animal to digest and absorb nutrients from their feed is influenced by factors like the presence of enzymes and the structure of the digestive system. Efficient digestion enhances nutrient utilization.
+
+3. **Mineral Balance**: Maintaining a proper balance between minerals such as calcium, phosphorus, and others is vital. An imbalance can hinder nutrient absorption or lead to deficiencies, affecting overall health and productivity.
+
+4. **Vitamin Supplementation**: Adequate levels of vitamins like vitamin A are necessary for normal bodily functions and reproductive health, which in turn supports efficient nutrient utilization.
+
+5. **Overall Health and Management Practices**: Factors such as disease prevention, stress management, and proper housing can also impact how effectively nutrients are utilized by the animal.
+
+In summary, the efficiency of nutrient utilization is determined by the interplay of these factors, each contributing to the animal's ability to use available nutrients effectively.",15,3931.77010002546,0.0821917808219178,0,0.7119780904522583,1
+Hop-2_TopK-5,2,5,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The main dairy goat breeds registered by the American Dairy Goat Association (ADGA) include the Alpine, Saanen, Nubian, Toggenburg, and LaMancha.",5,2908.0433999188244,0.2857142857142857,0,0.611539981908625,1
+Hop-2_TopK-5,2,5,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.",The Alpine breed's advantages are not detailed in the given context.,5,2488.42759989202,0.0,0,0.6312402606306791,1
+Hop-2_TopK-5,2,5,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat has no fixed coat color, with brown being the most common. It may have white markings on a black background and exhibits a darker line on the back (eel line) which is recessive.",5,2584.175599971786,0.34615384615384615,0,0.6797530280225856,1
+Hop-2_TopK-5,2,5,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","For every additional kilogram of milk produced, one kilogram of concentrate should be added.",5,6715.4158998746425,0.3870967741935484,0,0.896344648408373,1
+Hop-2_TopK-5,2,5,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach assists in digesting feed through the rumen, where microorganisms break down plant fiber into sugars and fatty acids. The abomasum then digests these microorganisms to release absorbable nutrients.",5,2197.871300159022,0.11764705882352941,0,0.7573362368246401,1
+Hop-2_TopK-5,2,5,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","During pre-milking teat dipping, clean and disinfect the nipples using an appropriate solution to prevent infection and reduce the risk of mastitis.",5,4041.654299944639,0.18604651162790697,0,0.7663898937835272,1
+Hop-2_TopK-5,2,5,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis commonly occurs when Mycobacterium bovis or M. avium enter a sheep through the respiratory tract, digestive tract, skin wounds, semen, or placenta.",5,1627.5345000904053,0.060606060606060615,0,0.6798549199845041,1
+Hop-2_TopK-5,2,5,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"Secondary bacterial infections in lambs can lead to severe respiratory issues, systemic spread of infection (sepsis), organ damage, neurological problems, joint inflammation, and increased mortality rates.",5,4477.455799933523,0.16216216216216214,0,0.7282913817404845,1
+Hop-2_TopK-5,2,5,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In regions with effective disease prevention measures and cooler climates, CAE infection is less common due to reduced viral activity and better management practices.",5,3692.3072999343276,0.29411764705882354,0,0.661655829441674,1
+Hop-2_TopK-5,2,5,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In early lactation, goats require a higher crude protein diet to support milk production, while in mid-lactation, they can maintain production on 16% crude protein, and by late lactation, their requirement drops to 10%.",5,2394.53629986383,0.15789473684210528,0,0.7195206508904505,1
+Hop-2_TopK-5,2,5,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","Goats deficient in vitamin A can experience eye problems caused by epithelial keratinization, leading to issues like corneal opacity or dryness.",5,1698.1194999534637,0.11764705882352941,0,0.6608091643920416,1
+Hop-2_TopK-5,2,5,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided to meet goats' nutritional needs for healthy growth, reproduction, and overall well-being.",5,1992.5284998025745,0.17647058823529413,0,0.6606400900001506,1
+Hop-2_TopK-5,2,5,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters in exercise yards are important for providing relief from direct sunlight, helping sheep avoid heat stress and maintain a comfortable temperature during activity.",5,2202.444299822673,0.3,0,0.8162902332657285,1
+Hop-2_TopK-5,2,5,13,What type of animal is a meat goat?,A small-sized ruminant.,A meat goat is a type of goat raised specifically for its meat.,5,2874.662399990484,0.14285714285714288,0,0.6158922355369557,1
+Hop-2_TopK-5,2,5,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization is determined by the quality and composition of the feed, as well as the animal's metabolic requirements.",5,3174.372499808669,0.0625,0,0.6979744006021937,1
+Hop-2_TopK-10,2,10,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) include:
+
+1. **Alpine Goats**: A Swiss breed known for their black and white markings.
+2. **Nubian Goats**: Originating from Africa, they are popular worldwide for dairy production.
+3. **Saanen Goats**: One of the largest breeds, recognized for high milk yield.
+4. **Toggenburg Goats**: Another Swiss breed with distinctive red coloration.
+
+Additionally, the La Mancha breed is also included, known for their facial features and use in dairy production. These breeds are integral to the ADGA's registry due to their contributions to the dairy industry.",10,4424.669299973175,0.0,0,0.596002713413067,1
+Hop-2_TopK-10,2,10,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed of sheep has several advantageous traits:
+
+1. **Hardiness and Adaptability**: They can survive in harsh environments.
+2. **Strong Flock Behavior**: They tend to stay together as a group.
+3. **Calm Temperament**: They remain calm when handled.
+4. **Good Maternal Instincts**: They are efficient mothers.
+5. **Efficient Milk Production**: They convert food into milk well, making them suitable for cheese production.
+
+These traits make the Alpine breed valuable in various settings and useful for both wool and dairy purposes.
+</think>
+
+The Alpine breed of sheep exhibits several advantageous traits:
+
+1. **Hardiness and Adaptability**: They excel in surviving challenging environments.
+2. **Strong Flock Behavior**: They naturally stay together, enhancing their survival skills.
+3. **Calm Temperament**: Their calm nature makes handling easier.
+4. **Good Maternal Instincts**: They are efficient mothers, ensuring the survival of their offspring.
+5. **Efficient Milk Production**: Their ability to convert food into milk makes them ideal for cheese production.
+
+These characteristics make the Alpine breed versatile and valuable in both wool and dairy contexts.",10,3208.35670013912,0.10810810810810811,0,0.7145141892435396,1
+Hop-2_TopK-10,2,10,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","Based on the provided context, the text does not explicitly describe the coat color characteristics of Nubian goats. It mentions that crossbreeding native black goats with improved breeds like Saoneng results in a whiter coat. However, there is no specific information about the original coat color of Nubian goats or their unique traits. Therefore, while it is noted that crossbreeding leads to a change in coat color, the exact characteristics of Nubian goats' coats remain unspecified in the given context.",10,8320.864300010726,0.12658227848101267,0,0.6111456144688272,1
+Hop-2_TopK-10,2,10,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","In the context of challenge feeding, the process involves determining nutrient requirements by gradually increasing the amount of concentrate provided to animals. The specific ratio of how much concentrate corresponds to each kilogram of milk produced isn't directly provided in the given text. However, based on the principle of challenge feeding, it is inferred that for each additional kilogram of milk produced, an equal or proportional amount of concentrate would be added as part of this method.
+
+**Answer:** For every additional kilogram of milk produced through challenge feeding, an equivalent amount of concentrate is added to determine nutrient requirements.",10,7698.512800037861,0.20253164556962025,0,0.7501098955959069,1
+Hop-2_TopK-10,2,10,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is structured with four compartments: the rumen, reticulum, omasum, and abomasum, each serving distinct roles in digestion:
+
+1. **Rumen**: The largest compartment, where fibrous feed is broken down by bacteria into smaller molecules through a process called fermentation. This step is crucial for converting plant-based material into absorbable nutrients.
+
+2. **Reticulum**: Acts as a sorting area, ensuring that food particles are small enough before they move to the omasum. It also holds enzymes that assist in further digestion.
+
+3. **Omasum**: Functions like a sieve, breaking down the digestible molecules even further and moving undigested material back to the rumen for additional fermentation.
+
+4. **Abomasum**: The third stomach compartment, where enzymes begin to break down proteins and carbohydrates into simpler forms that can be absorbed by the intestines.
+
+Together, these compartments work efficiently to prepare the food for absorption, ensuring that the goat can effectively utilize a variety of nutrients from its feed.",10,3141.7109000030905,0.11678832116788321,0,0.7573372491575312,1
+Hop-2_TopK-10,2,10,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","In the context of goat farming, particularly regarding disease prevention, it is essential to implement measures such as pre-milking teat dipping. This practice involves cleaning and disinfecting each teat before milking to remove contaminants and prevent the transmission of diseases like mastitis. Proper teat hygiene helps maintain the health of the animals and ensures milk quality.
+
+**Answer:**
+
+During pre-milking teat dipping, it is important to clean and disinfect each teat thoroughly. This process removes dirt, bacteria, and other potential pathogens, helping to prevent the spread of diseases such as mastitis and ensuring the health and well-being of the goats while maintaining high-quality milk production.",10,3609.6164998598397,0.1075268817204301,0,0.7357909527327637,1
+Hop-2_TopK-10,2,10,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Based on the provided context, which discusses various aspects of animal husbandry such as pneumonia, CAE, E. coli in lambs, and prevention measures but does not mention tuberculosis, we cannot determine the conditions under which tuberculosis commonly occurs. Therefore, it is not possible to provide an answer based on the given information.
+
+**Answer:** The provided context does not include information about tuberculosis, so its occurrence conditions cannot be determined from this text.",10,2300.497299991548,0.1408450704225352,0,0.6374385700344622,1
+Hop-2_TopK-10,2,10,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"Secondary bacterial infections can lead to a range of complications and serious health issues. Here are the key consequences:
+
+1. **Abscess Formation**: Bacteria may spread beyond the initial infection site, leading to abscesses—collections of pus in tissues that require drainage.
+
+2. **Sepsis**: The infection can enter the bloodstream, causing sepsis, which is a life-threatening condition where multiple organs become affected by bacterial toxins.
+
+3. **Toxemia**: Toxins from the bacteria can enter the bloodstream, leading to toxemia and potentially causing organ failure.
+
+4. **Pneumonia**: Bacterial infections in the lungs can result in pneumonia, leading to respiratory issues such as difficulty breathing.
+
+5. **Antibiotic Resistance**: Improper treatment of secondary infections can lead to antibiotic-resistant bacteria, complicating future treatments.
+
+These consequences highlight the importance of timely and effective treatment for secondary bacterial infections to prevent severe health complications.",10,3828.502800082788,0.09615384615384615,0,0.5817867489641566,1
+Hop-2_TopK-10,2,10,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In regions where goat herds are managed with good practices, including proper sanitation and biosecurity measures, Caprine Arthritis-Encephalitis (CAE) is less common. These areas likely have higher awareness of the disease and implement effective prevention strategies, leading to lower prevalence of CAE.",10,2368.7460001092404,0.1176470588235294,0,0.7188682981981545,1
+Hop-2_TopK-10,2,10,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"The protein requirements for goats during different stages of lactation can be understood through several key points:
+
+1. **Early Lactation**: This stage is characterized by the establishment of mammary gland function and initial milk production. The protein needs are higher relative to body weight, likely due to the need for tissue growth and repair, as well as the production of colostrum rich in nutrients.
+
+2. **Mid-Lactation**: As the animal moves into peak lactation, the focus shifts towards maintaining high milk production. While the absolute protein requirements might not increase as much as other nutrients like fat or calcium, the needs are significant to sustain production levels.
+
+3. **Feeding Practices**: Farmers often adjust feed rations based on the stage of lactation. Early lactation may require higher crude protein intake, while mid-lactation may balance protein with other nutrients to optimize milk composition and yield.
+
+In conclusion, early lactation has higher protein requirements per kilogram of body weight for establishing mammary function, whereas mid-lactation focuses on maintaining high production levels, suggesting that protein needs are highest in early stages relative to body weight.",10,5819.473200011998,0.06451612903225806,0,0.6876267319453522,1
+Hop-2_TopK-10,2,10,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","The primary vision issue associated with vitamin A deficiency in goats is night blindness. This condition arises due to the essential role of vitamin A in maintaining normal visual function, particularly in low-light conditions. Additionally, a lack of vitamin A can contribute to broader health issues such as rickets and reproductive problems, as outlined by the NRC recommendations for goat nutrition. Therefore, ensuring adequate vitamin A intake is crucial for the overall health and vision of goats.",10,2689.7915001027286,0.14492753623188406,0,0.6557982298727655,1
+Hop-2_TopK-10,2,10,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided based on their role in preventing specific health issues in goats, ensuring optimal health and productivity. Here's a breakdown of why they are crucial:
+
+1. **White Muscle Disease**: Caused by vitamin E and selenium deficiency, leading to muscle stiffness and potential fatality. Supplementation with these nutrients prevents this condition.
+
+2. **Pica**: Due to phosphorus deficiency, which can be addressed by balancing calcium and phosphorus intake or using calcium hydrogen phosphate.
+
+3. **Night Blindness**: Resulting from vitamin A deficiency, which can be mitigated by supplementing feed with vitamin A or ensuring access to beta-carotene-rich forage.
+
+4. **Coccidiosis**: A parasitic infection prevented by maintaining clean pastures and appropriate medications.
+
+5. **Mastitis**: Minimized through good milking practices and antiseptic dips to combat Staphylococcus aureus.
+
+6. **Bloat**: Prevented by avoiding rich forages and ensuring a balanced diet that aids digestion.
+
+By addressing these deficiencies, goats maintain health, avoid diseases, and enhance productivity, making trace minerals and vitamins essential components of goat husbandry.",10,4513.8886999338865,0.1021897810218978,0,0.7172092556305719,1
+Hop-2_TopK-10,2,10,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,Shade shelters in exercise yards are important for providing shade and reducing heat stress in sheep.,8,2316.15490000695,0.3448275862068965,0,0.8233603006762147,1
+Hop-2_TopK-10,2,10,13,What type of animal is a meat goat?,A small-sized ruminant.,A meat goat is an adult goat raised primarily for its meat.,10,2096.475299913436,0.14285714285714288,0,0.5989181142337905,1
+Hop-2_TopK-10,2,10,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency with which sheep utilize nutrients is influenced by a combination of factors:
+
+1. **Genetic Makeup**: Different breeds have varying efficiencies due to physiological traits affecting digestion and nutrient conversion.
+
+2. **Nutrient Quality and Availability**: The balance and digestibility of feed are critical for optimal nutrient absorption.
+
+3. **Environmental Conditions**: Factors like temperature, lighting, and airflow affect sheep comfort and feeding behavior.
+
+4. **Management Practices**: Feeding methods, housing, and regimens impact nutrient utilization, including how feed is presented and whether it's over or underfed.
+
+5. **Health and Welfare**: The health status of the sheep and their living conditions significantly influence nutrient efficiency.
+
+6. **Interactions Between Factors**: Genetic predispositions can affect how well sheep adapt to different feed qualities or environmental stresses.
+
+In summary, efficient nutrient utilization in sheep is a multifaceted outcome determined by genetic, nutritional, environmental, managerial, and health-related factors interacting together.",10,4574.6797998435795,0.08130081300813008,0,0.7265310569631049,1
+Hop-2_TopK-15,2,15,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The main dairy goat breeds registered by the American Dairy Goat Association (ADGA) include:
+
+1. **Holstein**: Known for high milk production and a distinctive black and white coloration.
+2. **Guernsey**: Renowned for their high-fat milk, which is rich in cream.
+3. **Nubian**: A smaller breed with high milk production and long lactation periods.
+4. **Saanen**: Originating from the Netherlands, they are known for producing large volumes of milk.
+5. **Alpine**: Hardy and productive, contributing significantly to dairy production.
+6. **Toggenburg**: Another Swiss breed noted for their robust health and high milk yield.
+
+These breeds are prominent in the dairy industry and are registered by ADGA.",15,5681.665799813345,0.0,0,0.5946872698131801,1
+Hop-2_TopK-15,2,15,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed has several advantages, including its dual-purpose nature for both milk and meat production, strong hooves that make it suitable for rough terrain, hardiness, adaptability to various environments, and the ability to thrive in harsh conditions.",15,2013.9679999556392,0.18867924528301885,0,0.7398618777009832,1
+Hop-2_TopK-15,2,15,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat is recognized for its distinctive coat color patterns, primarily characterized by an agouti pattern. This pattern consists of alternating bands of darker and lighter colors, which serves as a unique identifier for the breed. The coat's coloration aids in distinguishing Nubian goats from other breeds, making them easily identifiable based on their characteristic appearance.",15,2797.3462000954896,0.16666666666666669,0,0.6757098970452289,1
+Hop-2_TopK-15,2,15,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","Based on the information provided, challenge feeding involves adding concentrate in a way that supports proper nutrition without over-supplying. The text specifies providing 50 grams of creep feed per lamb daily along with high-quality hay. However, it does not explicitly state how much concentrate corresponds to each kilogram of milk produced. 
+
+To determine this ratio, additional information such as the stage of lactation and the age/size of the lambs would be necessary. Without these details, we cannot provide a precise numerical answer. Therefore, the exact amount of concentrate per kilogram of milk remains undetermined based on the given text.
+
+**Answer:** The exact amount of concentrate added for each additional kilogram of milk produced through challenge feeding cannot be determined from the provided information. Further details about the stage of lactation and lamb age/size are needed to establish this ratio.",11,5946.132600074634,0.125,0,0.7399162926309791,1
+Hop-2_TopK-15,2,15,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach plays a crucial role in digestion through its multi-chambered structure:
+
+1. **Forestomach (Rumen):** This is where the goat mixes feed with saliva to break down plant fibers and initiate digestion.
+2. **Rumen:** This chamber ferments the partially digested food, breaking down carbohydrates and producing enzymes.
+3. **Abomasum:** This is the true stomach where proteins are digested and nutrients are absorbed.
+
+Together, these parts work to efficiently process feed for the goat's health and well-being.",15,2665.557899978012,0.0975609756097561,0,0.7386396640732078,1
+Hop-2_TopK-15,2,15,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","During pre-milking teat dipping, key considerations include:
+
+1. **Preparation**: Clean the udder thoroughly to remove dirt, bacteria, and other contaminants.
+2. **Solution Application**: Use a suitable disinfectant or antibiotic solution, possibly iodine-based, as indicated in the context for umbilical cord care.
+3. **Coverage**: Ensure that the entire teat and surrounding areas are adequately covered by the solution.
+4. **Timing**: Perform this process before each milking session to prevent contamination and reduce the risk of udder infections.
+
+This approach helps maintain hygiene and reduces the likelihood of mastitis or other health issues for the dairy herd.",15,4312.140600057319,0.15841584158415842,0,0.754875325849041,1
+Hop-2_TopK-15,2,15,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis commonly occurs under the following conditions:
+
+1. **Close Contact with an Infected Individual**: When someone who has active tuberculosis coughs, sneezes, or even speaks, tiny droplets containing the bacteria are released into the air. These droplets can be inhaled by others nearby, leading to infection.
+
+2. **Touching Contaminated Surfaces**: The bacteria can also survive on surfaces for a certain period. Touching these surfaces and then touching your mouth, nose, or eyes can allow the bacteria to enter your body.
+
+3. **Professions with High Animal Exposure**: Occupations that involve handling animals, such as farming or working with cattle, increase the risk of contracting tuberculosis from animals, especially in regions where the disease is prevalent among livestock.
+
+These conditions are based on general knowledge about how tuberculosis spreads, as the provided context does not specifically mention it.",15,5122.903699986637,0.06722689075630252,0,0.6776636502830081,1
+Hop-2_TopK-15,2,15,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections in young sheep, particularly in cases of pneumonia, are severe and can lead to significant health complications. Here's a structured summary:
+
+1. **Weakened Immune System**: Poor husbandry practices, sudden weather changes, or cold stress can compromise the sheep's immune system, making them more susceptible to infections.
+
+2. **Proliferation of Pathogens**: The compromised state allows harmful bacteria to thrive, leading to secondary bacterial infections that can exacerbate existing conditions like pneumonia.
+
+3. **Severe Health Issues**: Symptoms such as fever, rapid breathing, coughing, and nasal discharge can become more pronounced, potentially leading to serious health problems or even death if untreated.
+
+4. **Increased Susceptibility**: The sheep may become more vulnerable to other diseases due to their weakened immune systems.
+
+5. **Potential Fatal Outcomes**: Without proper treatment, the infection can be fatal, highlighting the importance of timely veterinary intervention.
+
+In summary, secondary bacterial infections in young sheep with pneumonia can lead to severe health complications and potential fatality if not addressed promptly.",15,3515.887000132352,0.07692307692307693,0,0.7123265563878489,1
+Hop-2_TopK-15,2,15,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In goat herds, Caprine Arthritis-Enecephalitis (CAE), caused by a lentivirus, is less common in regions with cooler climates due to the virus's reduced survival in colder temperatures. This lower prevalence can be attributed to environmental factors such as lower temperatures inhibiting the virus and improved management practices like keeping goats dry and warm, which reduce transmission risk.",15,2614.2488999757916,0.16129032258064516,0,0.6935858009908485,1
+Hop-2_TopK-15,2,15,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In summary, during different stages of lactation, goats experience varying protein requirements:
+
+1. **Early Lactation**: This stage involves establishing milk production. Protein needs are relatively lower as the goat's system begins to adapt and synthesize proteins for lactation.
+
+2. **Mid-Lactation**: As milk volume and possibly its composition increase, the requirement for protein intake rises to sustain higher levels of milk production. The reliance on ruminal microbiota for protein synthesis becomes more critical during this stage.
+
+The context suggests that while exact numbers aren't provided, there is an increased demand for proteins as goats move from early to mid-lactation, reflecting the physiological demands of lactation.",15,4430.076800053939,0.09195402298850573,0,0.6724674442655226,1
+Hop-2_TopK-15,2,15,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","If goats do not receive sufficient amounts of Vitamin A, one of the potential vision problems they may encounter is **night blindness**. This condition can occur due to a deficiency in Vitamin A, which is essential for normal vision and eye function, particularly in low-light conditions.",15,1894.192900042981,0.15094339622641512,0,0.6982117936532446,1
+Hop-2_TopK-15,2,15,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential components of a goat's diet because they play critical roles in maintaining optimal health and productivity. Here’s a breakdown of why they are vital:
+
+1. **Vitamins**:
+   - **Vitamin A**: Essential for vision and immune function.
+   - **Vitamin D**: Facilitates calcium absorption, crucial for bone health.
+   - **Vitamin E**: Acts as an antioxidant, protecting cells from damage.
+   - **B Vitamins (Complex)**: Support metabolism and energy production.
+
+2. **Trace Minerals**:
+   - **Copper**: Assists in enzyme function and blood cell formation.
+   - **Zinc**: Supports immune function and tissue repair.
+   - **Iron**: Vital for oxygen transport and metabolic processes.
+
+These nutrients are required in specific quantities to prevent deficiencies that can lead to health issues such as poor growth, reduced fertility, or increased susceptibility to infections. Proper intake enhances goats' overall well-being and productivity, including milk yield and reproductive performance.",15,4202.852000016719,0.08,0,0.6899697753255748,1
+Hop-2_TopK-15,2,15,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,Shade shelters in exercise yards are important for providing shade and reducing heat stress in sheep.,8,2350.65870010294,0.3448275862068965,0,0.8233603006762147,1
+Hop-2_TopK-15,2,15,13,What type of animal is a meat goat?,A small-sized ruminant.,"A meat goat refers to a type of goat that is specifically bred and raised for its meat. The context provided highlights the Ji'an Goat, which was developed in Taiwan as a breed optimized for mutton production, emphasizing traits like rapid weight gain and efficient feed utilization. Therefore, a meat goat is a domesticated animal raised primarily for its flesh.
+
+**Answer:** A meat goat is a type of goat bred specifically to produce meat, such as the Ji'an Goat, which is known for its high-quality mutton.",15,3309.748600004241,0.03571428571428571,0,0.6332343693226776,1
+Hop-2_TopK-15,2,15,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency with which sheep and goats utilize nutrients is determined by a combination of several key factors:
+
+1. **Digestive System Functionality**: As ruminants, they possess a multi-chambered stomach (rumen, reticulum, omasum, abomasum) that allows for effective fermentation and nutrient breakdown. This system's efficiency can be influenced by the quality and type of feed consumed.
+
+2. **Metabolic Processes**: The ability to absorb and utilize nutrients effectively is dependent on enzyme activity, absorption rates in the intestines, and how quickly and efficiently the body converts these nutrients into energy or other essential products.
+
+3. **Health Status**: Proper health, including the absence of parasitic infections or diseases that impede digestion or nutrient absorption, is crucial for maintaining efficiency.
+
+4. **Environmental Conditions**: Access to clean water and a comfortable living environment are essential for optimal digestive function and nutrient utilization. Stress from poor housing or environmental stressors can negatively impact efficiency.
+
+5. **Genetic Makeup**: Different breeds may have inherent efficiencies due to genetic predispositions that affect their digestive and metabolic capabilities.
+
+In summary, nutrient utilization efficiency in sheep and goats is influenced by the quality of feed, the functionality of their digestive systems, metabolic processes, health status, environmental conditions, and genetic factors.",15,5523.307900177315,0.09090909090909091,0,0.7647195236300287,1
+Hop-3_TopK-5,3,5,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The main dairy goat breeds registered by the American Dairy Goat Association (ADGA) include Nubian, Guernsey, Jersey, Saanen, and Alpine goats.",5,5411.534699844196,0.0909090909090909,0,0.6115425201457663,1
+Hop-3_TopK-5,3,5,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.",The context does not provide specific information about the advantages of the Alpine breed.,5,2209.4401998911053,0.0,0,0.6095400302169578,1
+Hop-3_TopK-5,3,5,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat has no fixed coat color, with brown being the most common. It may have white markings on a black background and exhibits a darker line on the back (eel line) which is recessive.",5,2640.040799975395,0.34615384615384615,0,0.6797530280225856,1
+Hop-3_TopK-5,3,5,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","For every additional kilogram of milk produced, 0.33 kilograms of concentrate should be added.",5,6384.472999954596,0.37499999999999994,0,0.8870486328546954,1
+Hop-3_TopK-5,3,5,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach assists in digesting feed through the rumen, where microorganisms break down plant fiber into sugars and fatty acids. The abomasum then digests these microorganisms to release absorbable nutrients.",5,2248.7566999625415,0.11764705882352941,0,0.7573362368246401,1
+Hop-3_TopK-5,3,5,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","Clean and disinfect the udder and nipples thoroughly to remove dirt and bacteria. Ensure handlers have clean, washed hands.",5,3495.9521999116987,0.15,0,0.7835440749174586,1
+Hop-3_TopK-5,3,5,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Tuberculosis commonly occurs when sheep are exposed to infected materials through the respiratory tract, digestive tract, skin wounds, semen, or placenta.",5,2175.184100167826,0.0625,0,0.6787370643366916,1
+Hop-3_TopK-5,3,5,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"Secondary bacterial infections can lead to increased mortality, sepsis, chronic health issues, and potential organ failure.",5,3238.9499000273645,0.2222222222222222,0,0.6144314880018562,1
+Hop-3_TopK-5,3,5,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","Regions where CAE infection is less common include areas with robust prevention strategies such as strict biosecurity, proper sanitation, and vaccination programs.",5,2789.223200175911,0.12121212121212123,0,0.633359750791423,1
+Hop-3_TopK-5,3,5,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In early lactation, goats require a higher crude protein content (18.5%) compared to mid-lactation, where they need 16% crude protein.",5,3416.321499971673,0.22222222222222218,0,0.7007016250882452,1
+Hop-3_TopK-5,3,5,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","Goats deficient in vitamin A experience epithelial keratinization in their eyes, leading to vision issues such as corneal opacity and potentially night blindness.",5,2475.069100037217,0.2857142857142857,0,0.6779117925828642,1
+Hop-3_TopK-5,3,5,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided to support normal bodily functions, promote healthy growth, improve reproductive performance, and enhance milk production in goats.",5,2646.4158999733627,0.15384615384615383,0,0.6747469200739569,1
+Hop-3_TopK-5,3,5,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters in exercise yards are important to protect sheep from direct sunlight, preventing heat stress and ensuring a comfortable environment for their activities.",5,2976.9764998927712,0.25641025641025644,0,0.7997152105060379,1
+Hop-3_TopK-5,3,5,13,What type of animal is a meat goat?,A small-sized ruminant.,Boer goat,5,2296.5629999525845,0.0,0,0.6349570969828373,0
+Hop-3_TopK-5,3,5,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization is determined by the quality and balance of the diet, including factors such as digestibility, mineral content, and proper formulation to meet nutritional requirements.",5,3251.992000034079,0.05,0,0.6210681482149156,1
+Hop-3_TopK-10,3,10,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The main dairy goat breeds registered by the American Dairy Goat Association (ADGA) include Alpine, Angora, Boer, Guernsey, LaMancha, Nubian, Oberhasli, Saanen, and Toggenburg.",10,4981.020899955183,0.16,0,0.6086206550634509,1
+Hop-3_TopK-10,3,10,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed offers several advantages:
+
+1. Hardy and adaptable, they thrive in various environments and climates.
+2. High lambing rate ensures more lambs per ewe.
+3. Long lactation period extends milk production over an extended time.
+4. High milk production makes them valuable for dairy purposes.",10,2692.231500055641,0.19354838709677416,0,0.724732966557442,1
+Hop-3_TopK-10,3,10,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","Based on the provided context, the text does not explicitly describe the coat color characteristics of Nubian goats. It mentions that crossbreeding native black goats with improved breeds like Saoneng results in a whiter coat. However, there is no specific information about the original coat color of Nubian goats or their unique traits. Therefore, while it is noted that crossbreeding leads to a change in coat color, the exact characteristics of Nubian goats' coats remain unspecified in the given context.",10,8363.614100031555,0.12658227848101267,0,0.6111456144688272,1
+Hop-3_TopK-10,3,10,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","The challenge feeding method involves adding 0.5 kg of concentrate for each additional kilogram of milk produced in dairy sheep and goats. This approach helps determine the animals' feed requirements based on their production levels. Therefore, the correct answer is:
+
+**Answer:** For every additional kilogram of milk produced, 0.5 kg of concentrate is added.",10,2502.3064000997692,0.26229508196721313,0,0.8081605706266141,1
+Hop-3_TopK-10,3,10,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is structured with four compartments: the rumen, reticulum, omasum, and abomasum, each serving distinct roles in digestion:
+
+1. **Rumen**: The largest compartment, where fibrous feed is broken down by bacteria into smaller molecules through a process called fermentation. This step is crucial for converting plant-based material into absorbable nutrients.
+
+2. **Reticulum**: Acts as a sorting area, ensuring that food particles are small enough before they move to the omasum. It also holds enzymes that assist in further digestion.
+
+3. **Omasum**: Functions like a sieve, breaking down the digestible molecules even further and moving undigested material back to the rumen for additional fermentation.
+
+4. **Abomasum**: The third stomach compartment, where enzymes begin to break down proteins and carbohydrates into simpler forms that can be absorbed by the intestines.
+
+Together, these compartments work efficiently to prepare the food for absorption, ensuring that the goat can effectively utilize a variety of nutrients from its feed.",10,3191.4411999750882,0.11678832116788321,0,0.7573372491575312,1
+Hop-3_TopK-10,3,10,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","During pre-milking teat dipping for mastitis prevention:
+
+1. **Squeeze Out Accumulated Milk**: Any existing milk in the nipples is carefully removed.
+2. **Apply Antibiotic Ointment**: A tube of cow's mastitis ointment is gently pressed into each affected nipple.
+3. **Gentle Massage**: After applying the ointment, a soft massage is performed to ensure the medication is distributed properly.
+4. **Warm Compress**: Apply a warm compress to the udder area to aid in soothing and reducing inflammation.
+
+These steps are crucial for preventing mastitis and ensuring the health of the lactating ewe.",10,2659.423200180754,0.10526315789473684,0,0.7216283291432762,1
+Hop-3_TopK-10,3,10,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Based on the provided context, there is no direct mention of tuberculosis or its specific conditions. The text discusses various sheep diseases such as parasitic infections, pneumonia, coccidiosis, and arthritis encephalitis (CAE), but does not address tuberculosis. Therefore, while general knowledge might suggest factors like poor nutrition or stress can contribute to disease susceptibility, the context here does not specify conditions related to tuberculosis.
+
+**Answer:** The provided context does not mention specific conditions under which tuberculosis occurs in sheep.",10,4051.33350007236,0.08,0,0.6221538377534568,1
+Hop-3_TopK-10,3,10,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections in goats, particularly in young lambs, can be severe and multifaceted. These infections can lead to abscess formations, which are dangerous as they may cause systemic issues if left untreated. The immune system becomes overburdened, making the animals more susceptible to other diseases. In lambs, this can result in digestive problems like enteritis or mastitis, hindering growth and leading to severe health complications. Consequently, secondary bacterial infections pose significant risks to an animal's health and well-being.",10,3682.8349998686463,0.16216216216216217,0,0.7763761557320457,1
+Hop-3_TopK-10,3,10,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","CAE (Caprine Arthritis Encephalitis) is less common in goat herds located in regions with robust disease control and stringent biosecurity measures. These areas likely enforce strict preventive practices, such as vaccination, sanitation, and movement controls, effectively limiting the spread of the virus responsible for CAE.",10,2120.1292001642287,0.11320754716981131,0,0.7084412121648018,1
+Hop-3_TopK-10,3,10,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"During early lactation, goats require a higher intake of dietary protein to replenish the proteins used in milk production, as their own body proteins are depleted. This is because the initial stages of lactation involve using stored proteins, which aren't yet supplemented by feed. As lactation progresses into mid-lactation, the body's protein reserves are sufficient, and goats can rely more on dietary protein for their needs.
+
+**Summary:**
+- **Early Lactation:** Requires additional dietary protein to replenish body proteins used in milk production.
+- **Mid-Lactation:** Can depend more on dietary protein as body reserves are maintained without depletion.",10,2826.521100010723,0.10810810810810813,0,0.6924728334559695,1
+Hop-3_TopK-10,3,10,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.",The vision problem associated with vitamin A deficiency in goats is night blindness.,10,2530.3948000073433,0.23076923076923078,0,0.690477771234959,1
+Hop-3_TopK-10,3,10,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins should be provided to goats based on their essential roles in maintaining normal bodily functions. These nutrients are crucial for enzyme activity, immune response, tissue health, reproduction, and growth. For instance, vitamin A is vital for vision and tissue health, while vitamin D aids in calcium absorption. Without sufficient trace minerals and vitamins, goats can develop deficiencies leading to diseases such as white muscle disease from selenium deficiency or night blindness and reproductive issues from vitamin A deficiency. Therefore, supplying these nutrients supports goats' health, prevents deficiencies, enhances productivity, and ensures their overall well-being.",10,2708.3507000934333,0.10869565217391304,0,0.6854372009296994,1
+Hop-3_TopK-10,3,10,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters are essential in exercise yards for sheep as they provide crucial protection against the sun's heat. This prevents heat stress, which can lead to health issues such as decreased appetite and weakened immune function. By offering shade, animals can exercise comfortably, maintaining their well-being and performance effectively.",10,3239.7546998690814,0.2,0,0.835028022845667,1
+Hop-3_TopK-10,3,10,13,What type of animal is a meat goat?,A small-sized ruminant.,"A meat goat refers to a type of goat that is specifically raised for its meat. Common breeds include Boer Goats and Kiko Goats, known for their efficient conversion of feed into high-quality meat.",10,2831.632000161335,0.0625,0,0.6045189794486293,1
+Hop-3_TopK-10,3,10,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization in sheep farming is primarily determined by several key factors:
+
+1. **Feed Composition**: 
+   - **Crude Protein Content**: Higher levels of crude protein in forage can reduce the need for protein supplements, enhancing efficiency.
+   - **Fiber Structure**: The ratio of acid detergent fiber (ADF) and neutral detergent fiber (NDF) influences nutrient digestibility. Lower ADF and higher NDF are generally more digestible.
+
+2. **Digestion and Absorption**:
+   - Sheep have a digestive system that efficiently processes forages, especially when they are of appropriate maturity, which maximizes protein availability.
+
+3. **Management Practices**:
+   - Proper harvesting techniques to maintain forage quality.
+   - Adequate storage methods to prevent spoilage and retain nutrient value.
+
+In summary, the efficiency is influenced by the inherent nutritional content of the feed, its digestibility by sheep, and effective management practices that preserve feed quality.",10,3636.507200077176,0.08620689655172413,0,0.7050027296053367,1
+Hop-3_TopK-15,3,15,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The primary dairy goat breeds registered by the American Dairy Goat Association (ADGA) include:
+
+1. **Alpine**: Known for high milk production and distinctive black and white coloring.
+2. **Saanen**: Another high-producing breed with a reputation for large quantities of milk.
+3. **Nubian**: Notable for their long ears and unique appearance, they are also known for milk production.
+4. **Toggenburg**: Recognized for their compact build and high milk yield.
+
+These breeds are among the most commonly recognized by ADGA and are frequently used in dairy operations due to their productivity and specific characteristics.",15,4192.233300069347,0.0,0,0.5883689495898767,1
+Hop-3_TopK-15,3,15,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The advantages of the Alpine breed are:
+
+1. High Milk Production
+2. Calm Temperament
+3. Good Maternal Instincts
+4. Disease Resistance
+5. Adaptability to Various Environments",15,2336.1606998369098,0.0909090909090909,0,0.6275678338150779,1
+Hop-3_TopK-15,3,15,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The Nubian goat typically has a dark coat, often described as black. When crossbred with improved strains like the Saoneng, their offspring tend to have a lighter coat, which may be white or another shade. This change in color is noted by farmers who prefer the darker hues of the original Nubian goats. Therefore, the Nubian goat's natural coat color is dark, likely black, and crossbreeding can result in a lighter coat.",15,3183.789800154045,0.1518987341772152,0,0.6568290772238055,1
+Hop-3_TopK-15,3,15,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","For every additional kilogram of milk produced, add **50 grams** of concentrate.",15,2588.6351000517607,0.4666666666666667,0,0.890006710626792,1
+Hop-3_TopK-15,3,15,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is structured with four chambers—rumen, reticulum, omasum, and abomasum—which function together to efficiently digest its feed. Here's how each chamber contributes:
+
+1. **Rumen**: The first stop after the esophagus, where plant fibers are broken down by bacteria, creating chyme.
+
+2. **Reticulum**: Mixes chyme with digestive enzymes to further break down nutrients and prepare them for absorption.
+
+3. **Omasum**: Breaks down food into smaller particles, facilitating efficient nutrient absorption.
+
+4. **Abomasum**: The final chamber where proteins and other nutrients are absorbed, similar to a monogastric stomach.
+
+This multi-chambered system allows goats to effectively process roughage, making grasses a key component of their diet.",15,4070.1969999354333,0.1081081081081081,0,0.7509096448211219,1
+Hop-3_TopK-15,3,15,5,What should be noted during pre-milking teat dipping?,"The disinfectant should be in contact for 20–30 seconds for effective sanitization. Afterward, wipe clean with a paper towel to prevent disinfectant from entering the milk.","1. **Wash the Udder and Teats**: Use warm water and a mild detergent to thoroughly clean the udder and teats.
+2. **Disinfect with an Effective Solution**: Apply a disinfectant solution as recommended by your vet or agricultural guidelines.
+3. **Rinse Thoroughly**: Ensure all soap and disinfectant is rinsed off to prevent residue.
+4. **Dry the Area**: Use clean cloths or air dry to eliminate moisture, which can be a breeding ground for bacteria.
+
+These steps help in maintaining udder health and reducing the risk of mastitis during milking.",15,3272.651699837297,0.23404255319148937,0,0.8001630446098952,1
+Hop-3_TopK-15,3,15,6,Under what conditions does tuberculosis commonly occur?,It is commonly seen in intensively housed herds and poorly managed farms.,"Based on the provided context, while tuberculosis isn't explicitly mentioned, several factors are highlighted that can contribute to disease transmission in general. These include:
+
+1. **Disease Transmission**: The context notes that diseases can spread through contact with infected individuals or contaminated materials, which is a common method for many infectious diseases, including tuberculosis.
+
+2. **Preventive Measures**: The use of disinfectants and proper handling practices, such as cleaning milking equipment and ensuring clean water access, are mentioned. These measures are typical in preventing diseases like tuberculosis.
+
+3. **Sanitation and Hygiene**: Emphasis is placed on maintaining high standards of sanitation and hygiene, which can help reduce the risk of various infectious diseases, including tuberculosis.
+
+In summary, while not explicitly stated, the context suggests that conditions promoting disease transmission and the use of preventive measures are relevant to controlling diseases such as tuberculosis.",15,3453.171700006351,0.05504587155963303,0,0.575806947798583,1
+Hop-3_TopK-15,3,15,7,What could be the consequences of secondary bacterial infections?,They may affect the goat’s development and could lead to death.,"The consequences of secondary bacterial infections in animals, particularly in sheep and lambs, can be severe and multifaceted. These infections often lead to complications such as abscesses, systemic inflammation (sepsis), and potentially organ failure. Such conditions require immediate veterinary intervention to prevent progression to more serious health issues. Therefore, recognizing and addressing secondary bacterial infections early is crucial for the well-being of the animals.",15,2772.329700179398,0.13114754098360654,0,0.697860315584366,1
+Hop-3_TopK-15,3,15,8,"In which regions is CAE infection less common in goat herds, and what might be the reason?","Less common in African regions, possibly due to differences in milking methods.","In regions where CAE is less common, several factors contribute to this reduced prevalence. These include:
+
+1. **Proper Management Practices**: Regions where farmers are aware of the risks and implement practices like separating infected offspring from their dams and sterilizing colostrum before feeding to lambs may have lower CAE rates.
+
+2. **Vaccination Programs**: High vaccination rates, especially in pregnant goats, can significantly reduce the transmission of the virus, thereby lowering CAE prevalence.
+
+3. **Vector Control**: Regions without vectors like mosquitoes or flies that carry the disease-causing virus may experience fewer cases of CAE.
+
+4. **Access to Veterinary Services**: Better access to veterinary care allows for timely diagnosis and control measures, further reducing the spread of CAE.
+
+In summary, regions with effective management strategies, robust vaccination programs, absence of disease vectors, and accessible veterinary services are less affected by CAE.",15,4871.474799932912,0.05128205128205128,0,0.7204927334736166,1
+Hop-3_TopK-15,3,15,9,How do protein requirements differ between early and mid-lactation?,Higher in early lactation; the influence lessens in mid-lactation.,"In summary:
+
+- **Early Lactation**: Goats require a higher protein intake to produce nutrient-rich colostrum, which is essential for the health of the offspring. This phase demands significant protein consumption due to the body's transition from producing colostrum to milk.
+
+- **Mid-Lactation**: The protein requirements decrease compared to early lactation as the doe's milk supply stabilizes. While the protein content in milk is still substantial, it is lower than during colostrum production but sufficient for maintaining steady milk output.
+
+This understanding highlights the dynamic nature of a goat's nutritional needs throughout lactation, adapting to the stages of milk composition and production.",15,3703.6814000457525,0.0975609756097561,0,0.689120107963836,1
+Hop-3_TopK-15,3,15,10,What vision problems occur in goats deficient in vitamin A?,"Night blindness may occur, and in severe cases, it may lead to total blindness.","In goats, a deficiency in vitamin A can lead to vision problems, specifically resulting in night blindness. This condition occurs because vitamin A is essential for normal vision, particularly in low-light conditions. Therefore, inadequate intake or metabolic issues can impair the eyesight of goats, causing them to have difficulty seeing at night.",15,2691.4057000540197,0.17857142857142855,0,0.6965027529857609,1
+Hop-3_TopK-15,3,15,11,Why should trace minerals and vitamins be provided?,To prevent fetal rickets caused by calcium deficiency and low kid vitality due to trace mineral deficiencies.,"Trace minerals and vitamins are essential for goat health due to their roles in preventing deficiencies linked to various health issues. Here's a structured summary:
+
+1. **Trace Minerals:**
+   - **Selenium:** Prevents white muscle disease in lambs and improves reproductive health in ewes.
+   - **Iodine:** Essential for thyroid function, affecting growth and development.
+   - **Cobalt:** Supports metabolism of energy from forages.
+   - **Copper:** Aids in iron absorption and prevents conditions like anemia.
+
+2. **Vitamins:**
+   - **Vitamin A:** Prevents night blindness and supports reproductive health.
+   - **Vitamin D:** Crucial for calcium absorption, preventing issues like rickets.
+   - **Vitamin E:** Protects against white muscle disease and enhances reproductive success.
+
+These nutrients are often lacking in grazing lands or poor-quality hay, necessitating supplementation to maintain goat health and productivity.",15,3771.1233999580145,0.0970873786407767,0,0.7009458366756978,1
+Hop-3_TopK-15,3,15,12,What is the importance of shade shelters in exercise yards?,They improve the use of exercise areas and reduce heat stress in goats during summer.,"Shade shelters in exercise yards for sheep are crucial for several reasons:
+
+1. **Cooling Effect**: They provide a shaded area where sheep can rest to avoid overheating, preventing heat stress and exhaustion.
+
+2. **Heat Stress Prevention**: By offering a cooler environment, shade helps maintain the sheep's health and prevents complications from excessive heat.
+
+3. **Sunburn Protection**: Shade reduces the risk of sunburn on their skin and eyes, preventing discomfort and potential injuries.
+
+4. **Stress Reduction**: A shaded area can make sheep calmer, improving their overall well-being and behavior.
+
+5. **Energy Maintenance**: It helps maintain their energy levels during activity, ensuring they stay active without fatigue.
+
+In summary, shade shelters are essential for the health and comfort of sheep, offering crucial protection from heat and sunlight while promoting a relaxed state of being.",15,4008.2435000222176,0.1651376146788991,0,0.7992062997061937,1
+Hop-3_TopK-15,3,15,13,What type of animal is a meat goat?,A small-sized ruminant.,"A meat goat is a type of goat raised specifically for its meat, as opposed to dairy goats which are bred for their milk.",15,2207.3586999904364,0.08333333333333333,0,0.607793898542049,1
+Hop-3_TopK-15,3,15,14,What determines the efficiency of nutrient utilization?,"It depends on whether energy supply is sufficient, which is a key factor in goat productivity.","The efficiency of nutrient utilization in animals is influenced by several key factors:
+
+1. **Quality and Availability of Forage**: The type and quantity of available feed significantly impact nutrient absorption. High-quality forage ensures a more efficient conversion of consumed nutrients into the animal's body.
+
+2. **Mineral Supplementation**: Ensuring that animals receive adequate minerals, such as calcium and phosphorus, is crucial for proper bone development and overall health, which in turn affects nutrient utilization.
+
+3. **Health Status**: The overall health of the animal plays a role. Illnesses or diseases can impair nutrient absorption and metabolism, leading to inefficiencies.
+
+4. **Exercise and Movement**: Regular movement aids in digestion and nutrient absorption, enhancing the efficiency with which nutrients are utilized.
+
+5. **Avoiding Contaminants**: Ensuring that feed and water sources are free from contaminants like mold, pesticides, or harmful bacteria is essential for maintaining optimal nutrient utilization.
+
+By addressing these factors, animal husbandry practices can be optimized to enhance nutrient efficiency, promoting better health and productivity in the animals.",15,3473.790899850428,0.07518796992481203,0,0.6936196225006839,1

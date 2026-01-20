@@ -1,0 +1,89 @@
+﻿timestamp,experiment_id,chunk_size,overlap,question_id,question,reference_answer,predicted_answer,f1_score,cosine_similarity,num_chunks,latency_ms
+2026-01-09T19:17:42.565214,Chunk-1024_Overlap-256,1024,256,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The main dairy goat breeds registered by the American Dairy Goat Association, as highlighted in the context, are:
+
+1. **Nubian Goats**: Known for their high milk production and hybrid vigor.
+2. **Saanen Goats**: Recognized as a major dairy breed due to their milk yield.
+3. **Albaine (Alpines) Goats**: Significant for their milk production and noted for imports from the United States.
+
+These breeds are prominent in Taiwan's market, influenced by imports and corrective breeding practices.",0.0,0.5957691903096138,10,9125.813199905679
+2026-01-09T19:17:48.572084,Chunk-1024_Overlap-256,1024,256,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine sheep breed, also known as Albain, offers several advantageous traits that make them valuable in various farming and environmental conditions:
+
+1. **Hardiness**: Alpines are resilient and can thrive in harsh environments, making them suitable for challenging climates.
+2. **Endurance**: They are capable of traveling long distances, which is beneficial for transhumant grazing practices.
+3. **Climate Adaptability**: Their ability to adapt to various climates allows them to be raised in diverse regions, from alpine meadows to lower elevations.
+4. **Reproductive Efficiency**: With a high lambing rate, Alpines contribute to efficient flock growth and productivity.
+5. **Hardy Nature**: They tolerate rough living conditions, reducing the need for intensive management and making them easier to care for.
+
+These traits collectively make the Alpine breed a robust and versatile choice for many farming environments.",0.09917355371900827,0.7046443300672198,10,5976.504200138152
+2026-01-09T19:17:55.448137,Chunk-1024_Overlap-256,1024,256,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The context does not provide specific information about the coat color characteristics of Nubian goats. It focuses on the coat colors and breeding practices of goats in Taiwan, including Austronesian Taiwanese goats and improved breeds like Saoneng. The discussion includes details about coat color dominance (e.g., white being dominant over other colors) but does not mention Nubian goats specifically. Therefore, based on the provided context, it is not possible to determine the coat color characteristics of Nubian goats.",0.13698630136986303,0.6313028231464225,1,6837.634299881756
+2026-01-09T19:18:01.894950,Chunk-1024_Overlap-256,1024,256,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","To determine the amount of concentrate needed for each additional kilogram of milk produced in challenge feeding for dairy goats, the recommended ratio is:
+
+**1 kilogram of concentrate per additional kilogram of milk.**
+
+This ensures that the goat receives sufficient nutrients to support increased milk production without overfeeding, maintaining efficiency and health.",0.1694915254237288,0.7992252656254246,10,6408.286899793893
+2026-01-09T19:18:09.405749,Chunk-1024_Overlap-256,1024,256,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is a complex system designed for efficiently digesting plant-based feed, particularly fibrous materials like hay and grass. This digestive process involves several key steps:
+
+1. **Rumination**: Goats regurgitate food (cud) to chew it more thoroughly, which helps break down tough plant fibers.
+
+2. **Multi-Chambered Stomach**:
+   - **Rumen**: The first chamber where feed is stored and mixed with bacteria that ferment and break down cellulose.
+   - **Reticulum**: A second chamber that further processes the food, filtering out foreign objects.
+   - **Omasum**: A third chamber that absorbs water and nutrients, preparing the digestate for final digestion.
+   - **Abomasum**: The fourth chamber where stomach acids and enzymes continue breaking down the food.
+
+This structured digestive system allows goats to efficiently process fibrous vegetation through both microbial fermentation in the rumen and enzymatic digestion in subsequent chambers.",0.13114754098360654,0.7710719546277376,10,7489.9395001120865
+2026-01-09T21:21:08.059020,Chunk-2048_Overlap-512,2048,512,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The American Dairy Goat Association (ADGA) primarily recognizes several main dairy goat breeds. Based on the provided context, which mentions specific breeds raised in Taiwan, the main dairy goat breeds registered by ADGA include:
+
+1. **Saanen**
+2. **Toggenburg**
+3. **Albain** (another name for Alpine)
+
+These breeds are known for their adaptability and productivity in various climates and regions.",0.0,0.6407064362852297,10,12394.853099947795
+2026-01-09T21:21:14.531920,Chunk-2048_Overlap-512,2048,512,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed offers several advantageous characteristics that make them valuable in various sheep breeding contexts:
+
+1. **Long Breeding Season**: The Alpine breed has a longer breeding season compared to many temperate breeds, particularly when raised in tropical regions. This allows for more frequent lambing, enhancing productivity.
+
+2. **Climate Adaptability**: They demonstrate adaptability across different climates. In subtropical regions like Taiwan, Alpines do not experience severe spring estrus, though they still show some signs influenced by latitude, indicating their ability to thrive in diverse environments.
+
+3. **Milk Production and Maternal Qualities**: Known for their high milk production and strong maternal instincts, Alpines are economically valuable for both dairy and meat production.
+
+These traits collectively make the Alpine breed a versatile and efficient choice for sheep farming across various regions and conditions.",0.10084033613445377,0.706055278007987,10,6435.5004001408815
+2026-01-09T21:21:21.456292,Chunk-2048_Overlap-512,2048,512,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The context provided does not include specific details about the coat color characteristics of Nubian goats. Therefore, based solely on the given information, there is no mention of their coat color.",0.1702127659574468,0.6031858536233998,10,6889.85490007326
+2026-01-09T21:21:28.690908,Chunk-2048_Overlap-512,2048,512,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","The context provided does not specify a direct amount of concentrate to be added per kilogram of milk produced. Instead, it focuses on managing the intake of concentrate to prevent health issues such as obesity and pregnancy toxemia in ewes during different stages of their reproductive cycle. The emphasis is on adjusting the diet to support recovery after calving, encourage ovulation, and maintain healthy lactation without overfeeding, which could lead to complications like pregnancy toxemia. Therefore, while increasing concentrate can aid in milk production, there isn't a specific figure provided for challenge feeding related to milk output.",0.10416666666666667,0.7248726222170716,10,7190.8401001710445
+2026-01-09T21:21:35.537138,Chunk-2048_Overlap-512,2048,512,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is a complex system designed for efficient digestion of various feeds. Here's how it works:
+
+1. **Four-Chambered Stomach**: The stomach consists of four chambers: rumen, reticulum, omasum, and abomasum. This structure allows goats to digest fibrous plant material effectively.
+
+2. **Rumen Function**: The rumen is the largest chamber and serves as a fermentation tank. It contains microorganisms (bacteria, protozoa) that break down high-fiber feeds into monosaccharides (sugars). These microbes also convert protein and amino acids into microbial protein, which the goat later digests.
+
+3. **Regurgitation and Chewing**: After initial ingestion, undigested food particles form a bolus in the rumen. This bolus is regurgitated and chewed again by the goat to mix with saliva, aiding further breakdown.
+
+4. **Omasum and Abomasum**: The omasum processes the remaining material, removing water and some nutrients. The abomasum functions similarly to the human stomach, using gastric acid to break down proteins into peptides and amino acids, which are then absorbed in the small intestine.
+
+This digestive process allows goats to efficiently utilize a wide range of feed materials, particularly fibrous ones, by leveraging microbial fermentation and subsequent enzymatic digestion.",0.11180124223602485,0.7747984977328395,10,6791.083900025114
+2026-01-09T23:22:07.621716,Chunk-4096_Overlap-1024,4096,1024,0,What are the main dairy goat breeds registered by the American Dairy Goat Association?,"Saanen, Alpine, Toggenburg, Nubian.","The American Dairy Goat Association (ADGA) recognizes several major dairy goat breeds. Based on the provided context, the primary breeds registered by ADGA are:
+
+1. **Saanen** - Known for their high milk production.
+2. **Alpine (Albain)** - Recognized for their adaptability and milk yield.
+3. **Toggenburg** - Another prominent dairy breed with notable milk production.
+4. **Nubian** - Valued for their rich milk and distinctive appearance.
+
+These breeds are well-established in the United States and are recognized by ADGA for their dairy qualities.",0.0,0.6295097450946259,10,10276.045799953863
+2026-01-09T23:22:13.795751,Chunk-4096_Overlap-1024,4096,1024,1,What are the advantages of the Alpine breed?,"Strong constitution, endurance for long travel, high adaptability, suitable for extensive farming, high kid survival rate, long lactation period, and high milk production.","The Alpine breed offers several advantages, including:
+
+1. **Adaptability**: They can adjust well to various environmental conditions, as evidenced by their successful adaptation in Taiwan's subtropical climate.
+2. **Productivity**: These breeds tend to have higher productivity levels, which is beneficial for dairy purposes.
+3. **Reproductive Flexibility**: While they show some estrus signs influenced by latitude, they manage reproductive behavior adaptably when moved to tropical regions.
+
+These traits make the Alpine breed a valuable choice in different climatic conditions and farming contexts.",0.044444444444444446,0.7276331349701776,10,6134.026800049469
+2026-01-09T23:22:19.892418,Chunk-4096_Overlap-1024,4096,1024,2,What are the coat color characteristics of the Nubian goat?,"Coat color is variable, with brown shades being most common. The American Dairy Goat Association accepts various color patterns for registration.","The provided context does not include specific information regarding the coat color characteristics of Nubian goats. It focuses on their breeding behavior, health issues, and disease prevention rather than physical traits like coat color.",0.11538461538461538,0.6147410803455766,10,6067.9760000202805
+2026-01-09T23:22:26.510797,Chunk-4096_Overlap-1024,4096,1024,3,"According to challenge feeding, how much concentrate should be added for every additional kilogram of milk produced?","For every 1 kg increase in milk yield, add 0.5 kg of concentrate. An additional 250–500 grams may be provided.","To determine how much concentrate should be added for every additional kilogram of milk produced according to challenge feeding:
+
+1. **Understanding Challenge Feeding**: This method involves increasing feed amounts to maximize milk production potential.
+
+2. **Milk Production and Concentrate Ratio**:
+   - For each additional liter (equivalent to one kilogram) of milk, an additional 0.5 kg of concentrate is required.
+   - This ratio provides the necessary energy and nutrients to support increased milk production.
+
+**Answer**: Add 0.5 kilograms of concentrate for every additional kilogram of milk produced.",0.2564102564102564,0.8563930979598318,10,6580.038300016895
+2026-01-09T23:22:31.251801,Chunk-4096_Overlap-1024,4096,1024,4,How does the adult goat's stomach assist in digesting feed?,"It can hold a large volume of forage, supports microbial fermentation, and helps break down high-fiber components that monogastric animals cannot utilize.","The adult goat's stomach is a complex system designed for efficient digestion of plant-based feed. It consists of four chambers: the rumen, omasum, reticulum, and abomasum. The rumen holds and ferments food, breaking down tough fibers with the help of microbes that produce enzymes. These enzymes convert fibrous material into nutrients like volatile fatty acids, which are absorbed by the small intestine. The omasum absorbs water and electrolytes from the digesta, while the reticulum helps break down materials like metal. Finally, the abomasum digests proteins using enzymes and acids produced by the stomach. This four-chambered system allows goats to effectively process fibrous feeds, making them efficient grazers.",0.14814814814814814,0.7888936419374888,10,4702.384200179949
