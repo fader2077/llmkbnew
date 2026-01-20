@@ -87,27 +87,31 @@ Output ONLY a JSON array (max 5 relationships):
 Focus on HIGH-CONFIDENCE inferences only. If uncertain, return fewer relationships or [].
 """
 
-# 🚀 新增：優化過的批次處理 Prompt（以 Chunk 為中心）
+# 🚀 新增：优化修正版 Prompt（Hub Anchoring）
 WEAK_LINK_BATCH_PROMPT = """
 You are a Knowledge Graph Expert.
-Task: Connect the following "Isolated Entities" to the rest of the concepts in the text.
+Task: Connect the following "Isolated Entities" to the "Context Concepts" based on the text.
 
 ## 📄 Context Text:
 {text}
 
-## 🎯 Target Isolated Entities (Connect these!):
-{entities}
+## 🎯 Target Isolated Entities (Needs connections):
+{weak_entities}
+
+## 🔗 Context Concepts (Existing strong nodes in this chunk):
+{context_hubs}
 
 ## ⚡ Instructions:
-1. For each Target Entity, find **explicit or implied** relationships connecting it to ANY other entity in the text.
-2. The output must be valid JSON triples.
-3. Use precise predicates (e.g., 'PART_OF', 'CAUSES', 'LOCATED_AT', 'HAS_SYMPTOM', 'TREATED_BY').
-4. Focus on creating meaningful connections that integrate isolated entities into the knowledge graph.
+1. **Goal**: Create new semantic relationships connecting "Target Isolated Entities" to "Context Concepts".
+2. **Reasoning**: If the text implies a connection between a Target and a Context Concept, make it explicit.
+3. Use precise predicates: 'CAUSES', 'PART_OF', 'LOCATED_AT', 'HAS_SYMPTOM', 'TREATED_BY', 'AFFECTS', 'PREVENTS', 'REQUIRES'.
+4. Focus on connecting isolated entities to the stronger hub entities.
+5. Output Format: JSON Array of triples only.
 
-## 📤 Output JSON format:
+## 📤 Output JSON:
 [
-  {{"head": "IsolatedEntity", "relation": "RELATION", "tail": "OtherEntity"}},
-  {{"head": "OtherEntity", "relation": "RELATION", "tail": "IsolatedEntity"}}
+  {{"head": "IsolatedEntity", "relation": "RELATION", "tail": "ContextConcept"}},
+  {{"head": "ContextConcept", "relation": "RELATION", "tail": "IsolatedEntity"}}
 ]
 
 Extract as many valid relationships as possible to maximize connectivity.
@@ -233,7 +237,7 @@ class GraphOptimizer:
                 response = self.client.chat(
                     model=self.model, 
                     messages=[{"role": "user", "content": prompt}],
-                    options={"temperature": 0.0}
+                    options={"temperature": 0.7}
                 )
                 content = response['message']['content'] if isinstance(response, dict) else ''
                 
@@ -346,7 +350,7 @@ class GraphOptimizer:
                 response = self.client.chat(
                     model=self.model, 
                     messages=[{"role": "user", "content": prompt}],
-                    options={"temperature": 0.0}
+                    options={"temperature": 0.7}
                 )
                 content = response['message']['content'] if isinstance(response, dict) else ''
                 triples = parse_triples(content)
@@ -389,38 +393,50 @@ class GraphOptimizer:
             print(f"    ✅ 已刪除 {cnt} 個完全孤立實體")
 
     # --------------------------------------------------------------------------
-    # 🚀 新增：加速版弱連接推理 (Context-Aware Batching + Parallel Execution)
+    # 🚀 优化修正版：弱连接推理 (Fixes: MENTIONS exclusion + Hub Anchoring)
     # --------------------------------------------------------------------------
     def infer_weak_links_accelerated(self, degree_threshold: int = 2) -> Dict[str, int]:
         """
-        🚀 加速版：弱連接推理 (整合了上下文批次處理與並行執行)
+        🚀 加速版 v2.0：弱连接推理（修正版）
         
-        核心優化：
-        1. 批次處理：以 Chunk 為單位，一次處理多個弱實體
-        2. 並行執行：使用 ThreadPoolExecutor 同時處理多個 Chunks
-        3. 功能整合：同時完成弱連接修復和隨性關係挖掘
+        核心修正：
+        1. 修正度数计算：排除 MENTIONS 关系，只计算实际语意连接
+        2. 引入 Hub Anchoring：提供同 Chunk 的强实体作为连接锚点
+        3. 功能整合：同时完成弱连接修复和隐性关系挖掘
         
         Args:
-            degree_threshold: 連接數閾值，低於此值視為弱實體（預設 2）
+            degree_threshold: 語意連接數閾值，低於此值視為弱實體（預設 2）
             
         Returns:
             處理統計字典，包含 processed_chunks 和 new_relations
         """
         print(f"\n{'='*60}")
-        print(f"🚀 啟動加速版圖譜擴增 (Target: Weak Entities < {degree_threshold} links)")
-        print(f"   策略：Context-Aware Batching + Parallel Execution")
+        print(f"🚀 啟動加速版圖譜擴增 v2.0 (Target: Weak Semantic Links < {degree_threshold})")
+        print(f"   策略：Context-Aware Batching + Hub Anchoring")
         print(f"   並行度：{self.max_workers} workers")
         print(f"{'='*60}")
 
-        # 1. 抓取資料：找出「包含弱實體」的 Chunks，並將弱實體按 Chunk 分組
-        # 這句 Cypher 非常關鍵，它直接把工作量按 Chunk 分好了
+        # 1. 抓取資料：修正後的 Cypher（排除 MENTIONS，引入 Hub Anchoring）
+        # 核心邏輯：找出語意關係少於閾值的實體，並同時抓出該 Chunk 內的其他重要實體作為連接錨點
         fetch_query = """
-        MATCH (e:Entity)
-        WHERE COUNT { (e)--() } < $threshold
-        MATCH (e)<-[:MENTIONS]-(c:Chunk)
+        MATCH (c:Chunk)-[:MENTIONS]->(e:Entity)
+        
+        // 🔥 關鍵修正：只計算非 MENTIONS 的關係數量（排除 Chunk->Entity 的提及關係）
+        WHERE COUNT { (e)-[r]-() WHERE type(r) <> 'MENTIONS' } < $threshold
+        
         WITH c, collect(DISTINCT e.name) AS weak_entities
         WHERE size(weak_entities) > 0
-        RETURN c.id AS chunk_id, c.text AS text, weak_entities
+        
+        // 🔥 Hub Anchoring：抓取該 Chunk 內的強實體（語意連接 >= threshold）
+        MATCH (c)-[:MENTIONS]->(hub:Entity)
+        WHERE NOT hub.name IN weak_entities
+          AND COUNT { (hub)-[r]-() WHERE type(r) <> 'MENTIONS' } >= $threshold
+        WITH c, weak_entities, collect(DISTINCT hub.name)[..15] AS context_hubs
+        
+        RETURN c.id AS chunk_id, 
+               c.text AS text, 
+               weak_entities, 
+               context_hubs
         """
         
         with self.driver.session() as session:
@@ -428,45 +444,59 @@ class GraphOptimizer:
             tasks = [record.data() for record in result]
 
         if not tasks:
-            print("📊 未發現需要處理的弱實體，跳過優化")
+            print("📊 未發現需要處理的弱實體（檢查閾值或圖譜狀態）")
             return {
                 'processed_chunks': 0,
                 'new_relations': 0
             }
 
-        print(f"📊 掃描完成：共 {len(tasks)} 個 Chunks 包含弱連接實體，準備並行處理...")
+        print(f"📊 掃描完成：共 {len(tasks)} 個 Chunks 包含弱連接實體")
+        
+        # 顯示示例
+        if tasks:
+            example = tasks[0]
+            print(f"   範例: Chunk {example['chunk_id']}")
+            print(f"         - 弱實體數: {len(example['weak_entities'])}")
+            print(f"         - 錨點實體數: {len(example.get('context_hubs', []))}")
+        
         logging.info(f"Found {len(tasks)} chunks with weak entities")
 
         total_new_relations = 0
         
-        # 2. 定義單個任務的處理函數 (給執行緒用)
+        # 2. 定義增強版處理函數（含 Hub Anchoring）
         def process_chunk_task(task):
             chunk_id = task['chunk_id']
             text = task['text']
             weak_entities = task['weak_entities']
+            context_hubs = task.get('context_hubs', [])
             
-            # 如果該 Chunk 的弱實體太多，可以截斷以免 Prompt 太長
-            # 建議最多處理 20 個實體/Chunk
-            if len(weak_entities) > 20:
-                weak_entities = weak_entities[:20]
-                logging.warning(f"Chunk {chunk_id} has too many weak entities, truncated to 20")
+            # 截斷以防 Prompt 過長
+            if len(weak_entities) > 15:
+                weak_entities = weak_entities[:15]
+                logging.warning(f"Chunk {chunk_id}: truncated weak entities to 15")
             
-            target_list_str = ", ".join(weak_entities)
+            # 格式化實體列表
+            weak_str = ", ".join(weak_entities)
+            hubs_str = ", ".join(context_hubs) if context_hubs else "(No strong entities in this chunk)"
             
-            prompt = WEAK_LINK_BATCH_PROMPT.format(text=text, entities=target_list_str)
+            # 使用增強版 Prompt
+            prompt = WEAK_LINK_BATCH_PROMPT.format(
+                text=text, 
+                weak_entities=weak_str,
+                context_hubs=hubs_str
+            )
             
             try:
                 response = self.client.chat(
                     model=self.model,
                     messages=[{"role": "user", "content": prompt}],
-                    options={"temperature": 0.1}  # 低隨機性，求穩
+                    options={"temperature": 0.7}  # 低隨機性，求穩
                 )
                 content = response['message']['content'] if isinstance(response, dict) else ''
                 triples = parse_triples(content)
                 logging.debug(f"Chunk {chunk_id}: extracted {len(triples)} triples")
                 return triples
             except Exception as e:
-                # 靜默失敗或記錄 Log，不要卡住主流程
                 logging.error(f"Error processing chunk {chunk_id}: {e}")
                 return []
 
@@ -478,7 +508,7 @@ class GraphOptimizer:
             future_to_chunk = {executor.submit(process_chunk_task, task): task for task in tasks}
             
             # 使用 tqdm 顯示進度條
-            for future in tqdm(as_completed(future_to_chunk), total=len(tasks), desc="🔄 Processing Chunks"):
+            for future in tqdm(as_completed(future_to_chunk), total=len(tasks), desc="🔄 Inference Progress"):
                 triples = future.result()
                 if triples:
                     new_triples_batch.extend(triples)
@@ -504,6 +534,9 @@ class GraphOptimizer:
         """
         輔助函數：分批寫入關係，避免記憶體溢出
         
+        🔥 重要：使用統一的 :RELATION 類型，將語意存為 type 屬性
+        這與 builder.py 的格式保持一致，確保統計時能正確識別
+        
         Args:
             triples: 三元組列表
             batch_size: 每批寫入的數量
@@ -524,17 +557,18 @@ class GraphOptimizer:
                         if not rel_type or rel_type == "":
                             rel_type = "RELATED_TO"
                         
-                        # 動態創建關係（使用 Cypher 字串插值，需謹慎處理）
-                        # 注意：這裡使用參數化查詢保證安全性
-                        cypher = f"""
-                        MATCH (h:Entity {{name: $head}})
-                        MATCH (t:Entity {{name: $tail}})
+                        # 🔥 修正：使用統一的 :RELATION 類型，語意存為 type 屬性
+                        # 舊寫法（錯誤）: MERGE (h)-[r:`{rel_type}`]->(t)
+                        # 新寫法（正確）: MERGE (h)-[r:RELATION {type: $rel_type}]->(t)
+                        cypher = """
+                        MATCH (h:Entity {name: $head})
+                        MATCH (t:Entity {name: $tail})
                         WHERE h <> t
-                        MERGE (h)-[r:`{rel_type}`]->(t)
-                        ON CREATE SET r.source = 'ai_inference', r.confidence = 0.8
+                        MERGE (h)-[r:RELATION {type: $rel_type}]->(t)
+                        ON CREATE SET r.source = 'ai_inference', r.confidence = 0.8, r.created_at = timestamp()
                         RETURN r
                         """
-                        result = session.run(cypher, head=item['head'], tail=item['tail'])
+                        result = session.run(cypher, head=item['head'], tail=item['tail'], rel_type=rel_type)
                         
                         if result.single():
                             inserted_count += 1
@@ -850,7 +884,7 @@ class GraphOptimizer:
                 response = self.client.chat(
                     model=self.model,
                     messages=[{"role": "user", "content": prompt}],
-                    options={"temperature": 0.2, "top_p": 0.9}  # 稍高溫度允許推理
+                    options={"temperature": 0.7, "top_p": 0.9}  # 稍高溫度允許推理
                 )
                 content = response.get("message", {}).get("content", "") if isinstance(response, dict) else ""
                 
@@ -927,7 +961,7 @@ class GraphOptimizer:
         self,
         dataset_id: str,
         target_chunks: int = 10000,
-        temperature: float = 0.0
+        temperature: float = 0.7
     ) -> Dict[str, Any]:
         """
         使用假設性問題法對低密度 Chunks 重新抽取關係
