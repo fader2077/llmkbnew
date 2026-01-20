@@ -391,17 +391,20 @@ class GraphOptimizer:
     # --------------------------------------------------------------------------
     # 🚀 新增：加速版弱連接推理 (Context-Aware Batching + Parallel Execution)
     # --------------------------------------------------------------------------
-    def infer_weak_links_accelerated(self, degree_threshold: int = 2):
+    def infer_weak_links_accelerated(self, degree_threshold: int = 2) -> Dict[str, int]:
         """
         🚀 加速版：弱連接推理 (整合了上下文批次處理與並行執行)
         
         核心優化：
         1. 批次處理：以 Chunk 為單位，一次處理多個弱實體
         2. 並行執行：使用 ThreadPoolExecutor 同時處理多個 Chunks
-        3. 功能整合：同時完成弱連接修復和隱性關係挖掘
+        3. 功能整合：同時完成弱連接修復和隨性關係挖掘
         
         Args:
             degree_threshold: 連接數閾值，低於此值視為弱實體（預設 2）
+            
+        Returns:
+            處理統計字典，包含 processed_chunks 和 new_relations
         """
         print(f"\n{'='*60}")
         print(f"🚀 啟動加速版圖譜擴增 (Target: Weak Entities < {degree_threshold} links)")
@@ -426,7 +429,10 @@ class GraphOptimizer:
 
         if not tasks:
             print("📊 未發現需要處理的弱實體，跳過優化")
-            return
+            return {
+                'processed_chunks': 0,
+                'new_relations': 0
+            }
 
         print(f"📊 掃描完成：共 {len(tasks)} 個 Chunks 包含弱連接實體，準備並行處理...")
         logging.info(f"Found {len(tasks)} chunks with weak entities")
@@ -487,6 +493,12 @@ class GraphOptimizer:
 
         print(f"\n✅ 優化完成！新增了 {total_new_relations} 條關係，強化了弱實體連接。")
         logging.info(f"Weak link inference completed: {total_new_relations} new relations added")
+        
+        # 🔥 返回統計數據供 main.py 使用
+        return {
+            'processed_chunks': len(tasks),      # 處理的 Chunk 數量
+            'new_relations': total_new_relations # 新增的關係數量
+        }
 
     def _batch_insert_relations(self, triples: List[Dict], batch_size: int = 1000) -> int:
         """

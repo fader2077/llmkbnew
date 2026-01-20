@@ -266,15 +266,13 @@ def main():
                         optimizer.merge_synonym_entities()
                     
                     if 2 in strategies:
-                        print("\n🧠 策略 2：弱連接實體全局關係推理")
-                        infer_results = optimizer.infer_global_relations(
-                            min_degree=1,
-                            max_degree=3,
-                            max_inferences_per_entity=5,
-                            batch_size=10
+                        print("\n🧠 策略 2：弱連接實體全局關係推理 (🚀 加速版)")
+                        # 🔥 使用加速版函數（批次處理 + 並行執行）
+                        infer_results = optimizer.infer_weak_links_accelerated(
+                            degree_threshold=2
                         )
-                        print(f"  • 處理實體數：{infer_results['processed_entities']}")
-                        print(f"  • 推理關係數：{infer_results['inferred_relations']}")
+                        print(f"  • 掃描 Chunks：{infer_results.get('processed_chunks', 0)}")
+                        print(f"  • 新增關係數：{infer_results.get('new_relations', 0)}")
                     
                     if 3 in strategies:
                         print("\n💡 策略 3：假設性問題關係密集化")
