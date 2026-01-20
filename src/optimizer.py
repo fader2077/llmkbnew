@@ -416,7 +416,7 @@ class GraphOptimizer:
         # 這句 Cypher 非常關鍵，它直接把工作量按 Chunk 分好了
         fetch_query = """
         MATCH (e:Entity)
-        WHERE size((e)--()) < $threshold
+        WHERE COUNT { (e)--() } < $threshold
         MATCH (e)<-[:MENTIONS]-(c:Chunk)
         WITH c, collect(DISTINCT e.name) AS weak_entities
         WHERE size(weak_entities) > 0
