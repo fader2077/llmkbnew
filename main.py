@@ -209,10 +209,15 @@ def main():
                 
                 from src.optimizer import GraphOptimizer
                 try:
+                    # 🚀 使用優化版 GraphOptimizer（支持並行處理）
+                    # max_workers: 根據您的硬體調整
+                    #   - GPU 本地運行 (Ollama): 建議 2-4
+                    #   - API 服務 (GPT-4等): 可設 8-10
                     optimizer = GraphOptimizer(
                         driver=driver,
                         client=ollama_client,
-                        model=CONFIG["models"]["llm_model"]
+                        model=CONFIG["models"]["llm_model"],
+                        max_workers=CONFIG.get("optimization", {}).get("max_workers", 4)
                     )
                     
                     print("\n" + "="*70)

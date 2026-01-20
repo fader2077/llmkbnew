@@ -137,7 +137,9 @@ CONFIG = {
     "optimization": {
         "hub_threshold_percentile": 95,
         "max_iterations": 1,
-        "quality_threshold": 2.5
+        "quality_threshold": 2.5,
+        # 🚀 並行處理配置（加速版優化器）
+        "max_workers": 2,  # GPU 本地運行建議 2-4，API 服務可設 8-10
     },
 
     # ==========================================

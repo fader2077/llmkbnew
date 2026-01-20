@@ -5,9 +5,15 @@ Structure augmentation (Phase 3)
 """
 
 import json
+import logging
 from typing import List, Dict, Any
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
 from ollama import Client
 from src.utils import parse_triples
+
+# 設定 Logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # ==============================================================================
 # Prompt 定義
@@ -81,6 +87,32 @@ Output ONLY a JSON array (max 5 relationships):
 Focus on HIGH-CONFIDENCE inferences only. If uncertain, return fewer relationships or [].
 """
 
+# 🚀 新增：優化過的批次處理 Prompt（以 Chunk 為中心）
+WEAK_LINK_BATCH_PROMPT = """
+You are a Knowledge Graph Expert.
+Task: Connect the following "Isolated Entities" to the rest of the concepts in the text.
+
+## 📄 Context Text:
+{text}
+
+## 🎯 Target Isolated Entities (Connect these!):
+{entities}
+
+## ⚡ Instructions:
+1. For each Target Entity, find **explicit or implied** relationships connecting it to ANY other entity in the text.
+2. The output must be valid JSON triples.
+3. Use precise predicates (e.g., 'PART_OF', 'CAUSES', 'LOCATED_AT', 'HAS_SYMPTOM', 'TREATED_BY').
+4. Focus on creating meaningful connections that integrate isolated entities into the knowledge graph.
+
+## 📤 Output JSON format:
+[
+  {{"head": "IsolatedEntity", "relation": "RELATION", "tail": "OtherEntity"}},
+  {{"head": "OtherEntity", "relation": "RELATION", "tail": "IsolatedEntity"}}
+]
+
+Extract as many valid relationships as possible to maximize connectivity.
+"""
+
 HYPOTHETICAL_QUESTIONS_PROMPT = """
 You are an expert in knowledge graph relation extraction.
 
@@ -125,15 +157,32 @@ class GraphOptimizer:
     """
     圖譜優化控制器
     包含：實體對齊、關係強化、孤立點清理
+    
+    🚀 優化版本特性：
+    - 批次處理：以 Chunk 為單位批量處理弱實體
+    - 並行執行：使用多線程加速 LLM 推理
+    - 功能整合：同時完成弱連接修復和隱性關係挖掘
     """
-    def __init__(self, driver, client: Client, model: str):
+    def __init__(self, driver, client: Client, model: str, max_workers: int = 2):
         self.driver = driver
         self.client = client
         self.model = model
+        # 並行度設定（根據您的硬體調整）
+        # GPU 本地運行建議 2-4，API 服務可設更高（如 8-10）
+        self.max_workers = max_workers
+        logging.info(f"GraphOptimizer initialized with {max_workers} workers")
 
-    def run_optimization_pipeline(self, max_iterations: int = 1, dataset_id: str = "goat_kb_v1"):
-        """執行完整的 Phase 3 優化流程"""
+    def run_optimization_pipeline(self, max_iterations: int = 1, dataset_id: str = "goat_kb_v1", use_accelerated: bool = True):
+        """
+        執行完整的 Phase 3 優化流程
+        
+        Args:
+            max_iterations: 優化迭代次數
+            dataset_id: 資料集ID
+            use_accelerated: 是否使用加速版弱連接推理（預設True）
+        """
         print(f"\n⚡ 開始 Phase 3 圖譜優化 (Max Iterations: {max_iterations})")
+        print(f"   模式：{'🚀 加速版' if use_accelerated else '標準版'}")
         
         for i in range(max_iterations):
             print(f"\n🔄 Iteration {i+1}/{max_iterations}")
@@ -144,7 +193,14 @@ class GraphOptimizer:
             # 2. 關係強化 (增加連接)
             self.enhance_connectivity(dataset_id)
             
-            # 3. 清理孤立點 (打掃戰場)
+            # 3. 🚀 弱連接推理（使用加速版或標準版）
+            if use_accelerated:
+                self.infer_weak_links_accelerated(degree_threshold=2)
+            else:
+                # 如果您保留了舊版方法，可以在這裡調用
+                print("  ⚠️  標準版弱連接推理已被加速版取代")
+            
+            # 4. 清理孤立點 (打掃戰場)
             self.prune_isolated_nodes()
             
         print("\n✅ Phase 3 優化流程完成！")
@@ -331,6 +387,152 @@ class GraphOptimizer:
             cnt = record["cnt"] if record else 0
             
             print(f"    ✅ 已刪除 {cnt} 個完全孤立實體")
+
+    # --------------------------------------------------------------------------
+    # 🚀 新增：加速版弱連接推理 (Context-Aware Batching + Parallel Execution)
+    # --------------------------------------------------------------------------
+    def infer_weak_links_accelerated(self, degree_threshold: int = 2):
+        """
+        🚀 加速版：弱連接推理 (整合了上下文批次處理與並行執行)
+        
+        核心優化：
+        1. 批次處理：以 Chunk 為單位，一次處理多個弱實體
+        2. 並行執行：使用 ThreadPoolExecutor 同時處理多個 Chunks
+        3. 功能整合：同時完成弱連接修復和隱性關係挖掘
+        
+        Args:
+            degree_threshold: 連接數閾值，低於此值視為弱實體（預設 2）
+        """
+        print(f"\n{'='*60}")
+        print(f"🚀 啟動加速版圖譜擴增 (Target: Weak Entities < {degree_threshold} links)")
+        print(f"   策略：Context-Aware Batching + Parallel Execution")
+        print(f"   並行度：{self.max_workers} workers")
+        print(f"{'='*60}")
+
+        # 1. 抓取資料：找出「包含弱實體」的 Chunks，並將弱實體按 Chunk 分組
+        # 這句 Cypher 非常關鍵，它直接把工作量按 Chunk 分好了
+        fetch_query = """
+        MATCH (e:Entity)
+        WHERE size((e)--()) < $threshold
+        MATCH (e)<-[:MENTIONS]-(c:Chunk)
+        WITH c, collect(DISTINCT e.name) AS weak_entities
+        WHERE size(weak_entities) > 0
+        RETURN c.id AS chunk_id, c.text AS text, weak_entities
+        """
+        
+        with self.driver.session() as session:
+            result = session.run(fetch_query, threshold=degree_threshold)
+            tasks = [record.data() for record in result]
+
+        if not tasks:
+            print("📊 未發現需要處理的弱實體，跳過優化")
+            return
+
+        print(f"📊 掃描完成：共 {len(tasks)} 個 Chunks 包含弱連接實體，準備並行處理...")
+        logging.info(f"Found {len(tasks)} chunks with weak entities")
+
+        total_new_relations = 0
+        
+        # 2. 定義單個任務的處理函數 (給執行緒用)
+        def process_chunk_task(task):
+            chunk_id = task['chunk_id']
+            text = task['text']
+            weak_entities = task['weak_entities']
+            
+            # 如果該 Chunk 的弱實體太多，可以截斷以免 Prompt 太長
+            # 建議最多處理 20 個實體/Chunk
+            if len(weak_entities) > 20:
+                weak_entities = weak_entities[:20]
+                logging.warning(f"Chunk {chunk_id} has too many weak entities, truncated to 20")
+            
+            target_list_str = ", ".join(weak_entities)
+            
+            prompt = WEAK_LINK_BATCH_PROMPT.format(text=text, entities=target_list_str)
+            
+            try:
+                response = self.client.chat(
+                    model=self.model,
+                    messages=[{"role": "user", "content": prompt}],
+                    options={"temperature": 0.1}  # 低隨機性，求穩
+                )
+                content = response['message']['content'] if isinstance(response, dict) else ''
+                triples = parse_triples(content)
+                logging.debug(f"Chunk {chunk_id}: extracted {len(triples)} triples")
+                return triples
+            except Exception as e:
+                # 靜默失敗或記錄 Log，不要卡住主流程
+                logging.error(f"Error processing chunk {chunk_id}: {e}")
+                return []
+
+        # 3. 使用 ThreadPoolExecutor 並行執行
+        new_triples_batch = []
+        
+        with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
+            # 提交所有任務
+            future_to_chunk = {executor.submit(process_chunk_task, task): task for task in tasks}
+            
+            # 使用 tqdm 顯示進度條
+            for future in tqdm(as_completed(future_to_chunk), total=len(tasks), desc="🔄 Processing Chunks"):
+                triples = future.result()
+                if triples:
+                    new_triples_batch.extend(triples)
+
+        # 4. 批次寫入資料庫 (減少 DB I/O)
+        if new_triples_batch:
+            print(f"\n💾 正在將 {len(new_triples_batch)} 條新關係寫入 Neo4j...")
+            total_new_relations = self._batch_insert_relations(new_triples_batch)
+            print(f"   ✅ 成功寫入 {total_new_relations} 條關係")
+        else:
+            print("\n⚠️  未產生新關係")
+
+        print(f"\n✅ 優化完成！新增了 {total_new_relations} 條關係，強化了弱實體連接。")
+        logging.info(f"Weak link inference completed: {total_new_relations} new relations added")
+
+    def _batch_insert_relations(self, triples: List[Dict], batch_size: int = 1000) -> int:
+        """
+        輔助函數：分批寫入關係，避免記憶體溢出
+        
+        Args:
+            triples: 三元組列表
+            batch_size: 每批寫入的數量
+            
+        Returns:
+            成功寫入的關係數量
+        """
+        inserted_count = 0
+        
+        with self.driver.session() as session:
+            for i in range(0, len(triples), batch_size):
+                batch = triples[i:i+batch_size]
+                
+                for item in batch:
+                    try:
+                        # 清理關係名稱（轉為大寫並替換空格）
+                        rel_type = item.get('relation', 'RELATED_TO').upper().replace(" ", "_").replace("-", "_")
+                        if not rel_type or rel_type == "":
+                            rel_type = "RELATED_TO"
+                        
+                        # 動態創建關係（使用 Cypher 字串插值，需謹慎處理）
+                        # 注意：這裡使用參數化查詢保證安全性
+                        cypher = f"""
+                        MATCH (h:Entity {{name: $head}})
+                        MATCH (t:Entity {{name: $tail}})
+                        WHERE h <> t
+                        MERGE (h)-[r:`{rel_type}`]->(t)
+                        ON CREATE SET r.source = 'ai_inference', r.confidence = 0.8
+                        RETURN r
+                        """
+                        result = session.run(cypher, head=item['head'], tail=item['tail'])
+                        
+                        if result.single():
+                            inserted_count += 1
+                            
+                    except Exception as e:
+                        # 跳過失敗的關係，繼續處理下一個
+                        logging.debug(f"Failed to insert relation {item}: {e}")
+                        continue
+        
+        return inserted_count
 
     # --------------------------------------------------------------------------
     # 6. 質量問題修復 (Quality Issue Fixes)
