@@ -3,6 +3,7 @@ import re
 import hashlib
 from typing import List, Dict, Tuple, Any, Iterable
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from ollama import Client
 from config import CONFIG, TRIPLE_PROMPT_TEMPLATE
 from src.models import OllamaVectorEmbedder
@@ -138,7 +139,7 @@ def collect_triples_for_documents(
     language: str
 ) -> Tuple[Dict[str, List[Dict[str, str]]], List[str]]:
     """
-    为所有文档批量提取三元组
+    为所有文档批量提取三元组（🚀 多线程并行加速版）
     
     Args:
         client: Ollama client
@@ -152,16 +153,34 @@ def collect_triples_for_documents(
     triple_map = {}
     empty_chunks = []
     
-    for i, doc in enumerate(docs):
-        print(f"   Extracting {i+1}/{len(docs)}...", end="\r")
-        triples = extract_triples(client, doc["text"], model, language)
+    # 从 CONFIG 读取并行数量，若无则预设为 2
+    max_workers = CONFIG.get("generation", {}).get("max_workers", 2)
+    print(f"🚀 Starting parallel extraction with {max_workers} workers...")
+
+    # 定义单一任务函数
+    def process_doc(doc):
+        return doc["id"], extract_triples(client, doc["text"], model, language)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        # 提交所有任务
+        future_to_doc = {executor.submit(process_doc, doc): doc for doc in docs}
         
-        if not triples:
-            empty_chunks.append(doc["id"])
+        total = len(docs)
+        completed = 0
         
-        triple_map[doc["id"]] = triples
+        for future in as_completed(future_to_doc):
+            chunk_id, triples = future.result()
+            
+            if not triples:
+                empty_chunks.append(chunk_id)
+            
+            triple_map[chunk_id] = triples
+            completed += 1
+            
+            if completed % 10 == 0:
+                print(f"   Extracting {completed}/{total} ({(completed/total)*100:.1f}%)...", end="\r")
     
-    print(f"   ✅ 已处理 {len(docs)} 个文档，{len(empty_chunks)} 个无三元组")
+    print(f"\n   ✅ 已处理 {len(docs)} 个文档，{len(empty_chunks)} 个无三元组")
     return triple_map, empty_chunks
 
 

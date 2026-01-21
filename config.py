@@ -9,7 +9,7 @@ from neo4j import GraphDatabase
 # 基礎路徑
 BASE_DIR = Path.cwd()
 DATA_DIR = BASE_DIR / "data"
-KNOWLEDGE_BASE_PATH = DATA_DIR / "goat_data_text collection-1.2-eng12816.txt"
+KNOWLEDGE_BASE_PATH = DATA_DIR / "goat_data_text collection-1.2-eng.txt"
 QUESTION_DATASET_PATH = DATA_DIR / "topic-dataset(multi-hop).csv"
 RESULT_DIR = DATA_DIR / "results"
 RESULT_DIR.mkdir(parents=True, exist_ok=True)
@@ -103,11 +103,11 @@ CONFIG = {
     # C. 生成參數（優化以避免 CUDA OOM）
     # ==========================================
     "generation": {
-        "temperature": 0.0,
-        "max_questions": 200,      # 
+        "temperature": 0.7,
+        "max_questions": 200,      # 生成问题数量
         "context_window": 4096,
-        "batch_size": 10,          # 
-        "max_workers": 1          # 
+        "batch_size": 10,          # 批次大小
+        "max_workers": 2           # 🚀 并行线程数（本机 GPU: 2-4, API: 8-10）
     },
 
     # ==========================================

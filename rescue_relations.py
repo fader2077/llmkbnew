@@ -22,10 +22,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def rescue_relations():
     """数据救援：转换错误格式的关系"""
     
-    # 连接数据库
-    uri = CONFIG["neo4j"]["uri"]
-    user = CONFIG["neo4j"]["user"]
-    password = CONFIG["neo4j"]["password"]
+    # 连接数据库（使用正确的配置结构）
+    uri = CONFIG["infrastructure"]["neo4j_uri"]
+    user = CONFIG["infrastructure"]["neo4j_auth"][0]
+    password = CONFIG["infrastructure"]["neo4j_auth"][1]
     
     driver = GraphDatabase.driver(uri, auth=(user, password))
     
