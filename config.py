@@ -94,7 +94,7 @@ CONFIG = {
     # ==========================================
     "models": {
         "llm_model": "deepseek-r1:14b-qwen-distill-q4_K_M",
-        "graph_create_model": "deepseek-r1:14b-qwen-distill-q4_K_M",
+        "graph_create_model": "deepseek-r1:8b-llama-distill-q4_K_M",
         "embed_model": "nomic-embed-text:latest",
         "answer_language": "english"
     },
@@ -114,20 +114,20 @@ CONFIG = {
     # D. 第一階段：索引消融網格（簡化測試）
     # ==========================================
     "indexing_grid": [
-        {"chunk_size": 128, "overlap": 16},
+        #{"chunk_size": 128, "overlap": 16},
         #{"chunk_size": 128, "overlap": 32},
         #{"chunk_size": 256, "overlap": 32},
         #{"chunk_size": 256, "overlap": 64},
         #{"chunk_size": 512, "overlap": 128},
         #{"chunk_size": 512, "overlap": 256},
-        #{"chunk_size": 1024, "overlap": 128},
-        #{"chunk_size": 1024, "overlap": 256},
-        #{"chunk_size": 2048, "overlap": 256},  
-        #{"chunk_size": 2048, "overlap": 512},
-        #{"chunk_size": 4096, "overlap": 512}, 
-        #{"chunk_size": 4096, "overlap": 1024},
-        #{"chunk_size": 8192, "overlap": 1024},
-        #{"chunk_size": 8192, "overlap": 2048},
+        {"chunk_size": 1024, "overlap": 128},
+        {"chunk_size": 1024, "overlap": 256},
+        {"chunk_size": 2048, "overlap": 256},  
+        {"chunk_size": 2048, "overlap": 512},
+        {"chunk_size": 4096, "overlap": 512}, 
+        {"chunk_size": 4096, "overlap": 1024},
+        {"chunk_size": 8192, "overlap": 1024},
+        {"chunk_size": 8192, "overlap": 2048},
     ],
     "optimal_indexing": {"chunk_size":128, "overlap": 16},
 
@@ -148,8 +148,8 @@ CONFIG = {
     "retrieval": {
         "hop_counts": [0, 1, 2, 3],      # ✅ 0=Baseline (Vector Only), 1-3=Graph RAG
         "top_k_values": [5, 10, 15],     # 返回前 k 個 chunks
-        "max_nodes_per_hop": 10,         # 每跳最多擴展的實體數
-        "decay_factor": 0.7,             # 關聯 chunk 的分數衰減係數
+        "max_nodes_per_hop": 10,         # 🔥 修正：改为单个整数值（每跳最多扩展的实体数）
+        "decay_factor": 0.7,             # 🔥 修正：改为单个浮点数（关联 chunk 的分数衰减系数）
     },
 
     # ==========================================
@@ -158,7 +158,7 @@ CONFIG = {
     "retrieval_grid": {
         "hop_counts": [0, 1, 2, 3],      # ✅ 0 作為基準線
         "top_k_values": [5, 10, 15],
-        "max_questions": 150,             # 最多測試問題數
+        "max_questions": 200,             # 最多測試問題數
     }
 }
 
