@@ -301,35 +301,46 @@ class IndexingAblationRunner(BaseExperimentRunner):
         all_results = []
         builder = GraphBuilder(self.driver, self.ollama_client)
         
-        for config in chunk_configs:
+        # 🔥 初始化實驗前先清空一次數據庫
+        print("🗑️  初始清理數據庫...")
+        logger.info("🗑️  初始清理數據庫...")
+        clean_database(self.driver, "", clean_all=True)
+        
+        for idx, config in enumerate(chunk_configs, 1):
             chunk_size = config['chunk_size']
             overlap = config['overlap']
             exp_id = f"Chunk-{chunk_size}_Overlap-{overlap}"
             
-            print(f"\n{'-'*60}")
-            print(f"🏗️  構建配置: {exp_id}")
-            print(f"{'-'*60}")
+            print(f"\n{'='*70}")
+            print(f"🏗️  配置 {idx}/{len(chunk_configs)}: {exp_id}")
+            print(f"{'='*70}")
             
-            logger.info(f"\n{'-'*60}")
-            logger.info(f"🏗️  構建配置: {exp_id}")
-            logger.info(f"{'-'*60}")
-            
-            # 1. 清空資料庫
-            print("🗑️  清空資料庫...")
-            clean_database(self.driver, "", clean_all=True)
+            logger.info(f"\n{'='*70}")
+            logger.info(f"🏗️  配置 {idx}/{len(chunk_configs)}: {exp_id}")
+            logger.info(f"{'='*70}")
             
             # 2. 重建圖譜
             try:
                 print(f"🔨 重建圖譜 (Chunk={chunk_size}, Overlap={overlap})...")
+                logger.info(f"🔨 開始重建圖譜...")
                 builder.build_graph(text_path, chunk_size=chunk_size, overlap=overlap)
+                logger.info(f"✅ 圖譜建立完成")
             except Exception as e:
                 print(f"❌ 建圖失敗: {e}")
                 logger.error(f"❌ 建圖失敗: {e}")
+                # 🔥 建圖失敗時，清空數據庫準備下一個配置
+                if idx < len(chunk_configs):
+                    print(f"🗑️  清空失敗的數據...")
+                    clean_database(self.driver, "", clean_all=True)
                 continue
                 
             # 3. 執行 QA 評測 (固定使用 Hop=2, TopK=10 作為基準)
-            print(f"📝 執行 QA 評測...")
-            for idx, row in df_questions.iterrows():
+            print(f"📝 執行 QA 評測 (固定 Hop=2, TopK=10)...")
+            logger.info(f"📝 開始 QA 評測 ({len(df_questions)} 個問題)...")
+            
+            config_results = []  # 🔥 當前配置的結果
+            
+            for q_idx, row in df_questions.iterrows():
                 question = row.get('question', '')
                 reference = row.get('answer', row.get('reference_answer', ''))
                 
@@ -337,7 +348,7 @@ class IndexingAblationRunner(BaseExperimentRunner):
                     # 使用 RetrievalEngine 進行回答
                     qa_result = self.engine.run_qa(
                         question=question, 
-                        hop=0,  # 固定參數以比較 Index 效果
+                        hop=2,  # 固定參數以比較 Index 效果
                         top_k=10, 
                         reference_answer=reference,
                         verbose=False
@@ -347,12 +358,12 @@ class IndexingAblationRunner(BaseExperimentRunner):
                     f1 = calculate_f1_score(qa_result.predicted_answer, reference)
                     cos = calculate_cosine_similarity_score(qa_result.predicted_answer, reference, self.embedder)
                     
-                    all_results.append({
+                    result_record = {
                         "timestamp": datetime.now().isoformat(),
                         "experiment_id": exp_id,
                         "chunk_size": chunk_size,
                         "overlap": overlap,
-                        "question_id": idx,
+                        "question_id": q_idx,
                         "question": question,
                         "reference_answer": reference,
                         "predicted_answer": qa_result.predicted_answer,
@@ -360,22 +371,42 @@ class IndexingAblationRunner(BaseExperimentRunner):
                         "cosine_similarity": cos,
                         "num_chunks": qa_result.num_chunks,
                         "latency_ms": qa_result.inference_latency_ms
-                    })
-                    print(f"   Q{idx} Cos={cos:.2f}", end='\r')
-                    logger.info(f"✅ Q{idx} | F1={f1:.3f} | Cos={cos:.3f}")
+                    }
+                    
+                    all_results.append(result_record)
+                    config_results.append(result_record)
+                    
+                    print(f"   Q{q_idx} Cos={cos:.2f}", end='\r')
+                    logger.info(f"✅ Q{q_idx} | F1={f1:.3f} | Cos={cos:.3f}")
                     
                 except Exception as e:
                     print(f"   ⚠️ QA Error: {e}")
-                    logger.error(f"❌ Q{idx} Error: {e}")
+                    logger.error(f"❌ Q{q_idx} Error: {e}")
             
             print()
             
-            # ⚠️  每個配置完成後清空知識庫
-            print(f"🗑️  清空知識庫（準備下一個配置）...")
-            logger.info(f"🗑️  清空知識庫（準備下一個配置）...")
-            clean_database(self.driver, "", clean_all=True)
+            # 🔥 每個配置完成後立即保存該配置的結果
+            if config_results:
+                avg_f1 = sum(r['f1_score'] for r in config_results) / len(config_results)
+                avg_cos = sum(r['cosine_similarity'] for r in config_results) / len(config_results)
+                print(f"📊 當前配置結果: Avg F1={avg_f1:.3f}, Avg Cos={avg_cos:.3f}")
+                logger.info(f"📊 配置 {exp_id} 完成: Avg F1={avg_f1:.3f}, Avg Cos={avg_cos:.3f}")
+            
+            # 🔥 清空數據庫準備下一個配置（除非是最後一個）
+            if idx < len(chunk_configs):
+                print(f"🗑️  清空知識庫（準備下一個配置 {idx+1}/{len(chunk_configs)}）...")
+                logger.info(f"🗑️  清空知識庫（準備配置 {idx+1}）...")
+                clean_database(self.driver, "", clean_all=True)
+            else:
+                print(f"✅ 所有配置測試完成！")
+                logger.info(f"✅ 所有 {len(chunk_configs)} 個配置測試完成")
 
-        # 4. 儲存結果
+        # 4. 儲存完整結果
+        if not all_results:
+            print(f"\n❌ 沒有成功的實驗結果")
+            logger.error("❌ 所有配置均失敗，無結果可保存")
+            return pd.DataFrame()
+        
         df_results = self._save_results(all_results, "indexing_ablation")
         self._print_summary(df_results)
         
